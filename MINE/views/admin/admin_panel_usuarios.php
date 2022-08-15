@@ -29,7 +29,8 @@ if (mysqli_num_rows($result) > 0) {
 
    <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
    <td><?php echo $sn; ?> </td>
-   <td><form action="admin_usuarios.php" method="post" id="btn_standard"><input type="submit" value="<?php echo $data['idUser'] ?>" name="editar_usuario"></td>
+   <td><form action="admin_usuarios.php" method="post" id="btn_standard"><input type="submit"
+    value="<?php echo $data['idUser'] ?>" name="editar_usuario"></td>
    <td><?php echo $data['nombre']; ?> </td>
    <td><?php echo $data['apellidos']; ?> </td>
    <td><?php echo $data['genero']; ?> </td>

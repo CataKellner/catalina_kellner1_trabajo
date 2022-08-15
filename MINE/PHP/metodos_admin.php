@@ -51,8 +51,9 @@ function create_new_user(){
 
   global $mysqli;
 
-  $nombre = $apellidos = $telefono = $fecha_nacimiento = $direccion = $genero = "";
-  $_SESSION["rol"] = "usuario";
+  $nombre = $apellidos = $telefono = $fecha_nacimiento = $direccion = $genero = $rol = "";
+
+  $rol = $_POST['rol'];
 
   $usuario = $_POST['usuario'];
   $email = $_POST['email'];
@@ -114,7 +115,7 @@ function create_new_user(){
           }
 
       // Rellenamos User login con los datos de la sesion
-      $sql= "INSERT INTO users_login(idUser, usuario, password, rol) VALUES ('".$x."','".$usuario."', '".$pass."','usuario')";
+      $sql= "INSERT INTO users_login(idUser, usuario, password, rol) VALUES ('".$x."','".$usuario."', '".$pass."','".$rol."')";
       $rs = $mysqli->query($sql);
 
 

@@ -29,7 +29,7 @@ function rellenar_datos($id){
   $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data WHERE idUser = $id";
   $result=$mysqli->query($query);
   $data = mysqli_fetch_assoc($result);
-  $s_Nombre = $data['idUser'];
+  $s_Nombre = $data['nombre'];
   $s_Apellidos = $data['apellidos'];
   $s_Email =$data['email'] ;
   $s_Direccion =$data['direccion'] ;
@@ -47,10 +47,10 @@ function rellenar_datos($id){
 <!-- // show data on inputs -->
 <form action="admin_panel_usuarios_modificar.php" method="post" id="datos_usuario">
   <p>ID</p>
-  <input type="text" value="<?php echo $s_Nombre ?>" name="idUser">
+  <input type="text" value="<?php echo $_POST['editar_usuario']; ?>" name="idUser">
   <p>Nombre</p>
   <input type="text" name="nombre" id="nombre"
-  size="15" autocomplete="given-name" value="<?php echo $data['nombre']; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
+  size="15" autocomplete="given-name" value="<?php echo $s_Nombre; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
   <p>Apellidos</p>
   <input type="text" value="<?php echo $data['apellidos']; ?>" name="apellidos">
   <p>Telefono</p>

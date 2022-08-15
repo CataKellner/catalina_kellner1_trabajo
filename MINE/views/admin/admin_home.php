@@ -70,10 +70,10 @@ if (isset($_GET['logout'])) {
 	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
-				<a href="admin_citas.php">Citas</a>
+				<a href="admin_panel_citas.php">Citas</a>
 			</li> 
 			<li class="header-navegacion">
-				<a href="admin_noticias.php">Noticias</a>
+				<a href="admin_panel_noticias.php">Noticias</a>
 			</li> 
 			<li class="header-navegacion">
 				<a href="admin_perfil.php">Perfil</a>

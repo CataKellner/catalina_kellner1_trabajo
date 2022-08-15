@@ -227,22 +227,22 @@ if (isset($_GET['logout'])) {
 //     header("Location: login_BCRYPT.php");
 // }
 
-$sqlCitas="SELECT `idCitas`, `idUser`, `fecha_cita`, `motivo` FROM `citas` WHERE 1";
-// $sqlCita.=" AND `usuario` = '".$user."'";
+// $sqlCitas="SELECT `idCitas`, `idUser`, `fecha_cita`, `motivo` FROM `citas` WHERE 1";
+// // $sqlCita.=" AND `usuario` = '".$user."'";
 
-$sqlCitas="UPDATE citas SET fecha_cita = '$fecha_cita', motivo = '$motivo'  WHERE condition";
-
-
-$sqlCita= "INSERT INTO citas(fecha_cita, motivo) VALUES ('".$fecha_cita."','".$motivo."')";
-$qlCita = $mysqli->query($sqlCita);
+// $sqlCitas="UPDATE citas SET fecha_cita = '$fecha_cita', motivo = '$motivo'  WHERE condition";
 
 
-$sqlNoticias="SELECT `idNoticias`, `idUser`, `titulo`, `imagen`, `fecha` FROM `noticias` WHERE 1";
-// $sqlNoticias.=" AND `usuario` = '".$user."'";
+// $sqlCita= "INSERT INTO citas(fecha_cita, motivo) VALUES ('".$fecha_cita."','".$motivo."')";
+// $qlCita = $mysqli->query($sqlCita);
 
-$sqlNoticias="UPDATE noticias SET titulo = '$titulo', imagen = '$imagen', 	fecha = '$fecha'  WHERE condition";
 
-$sqlNoticias= "INSERT INTO noticias(titulo, imagen, fecha) VALUES ('".$titulo."','".$imagen."','".$fecha."')";
-// $sqlNoticias = $mysqli->query($sqlCita);
+// $sqlNoticias="SELECT `idNoticias`, `idUser`, `titulo`, `imagen`, `fecha` FROM `noticias` WHERE 1";
+// // $sqlNoticias.=" AND `usuario` = '".$user."'";
+
+// $sqlNoticias="UPDATE noticias SET titulo = '$titulo', imagen = '$imagen', 	fecha = '$fecha'  WHERE condition";
+
+// $sqlNoticias= "INSERT INTO noticias(titulo, imagen, fecha) VALUES ('".$titulo."','".$imagen."','".$fecha."')";
+// // $sqlNoticias = $mysqli->query($sqlCita);
 
 ?>

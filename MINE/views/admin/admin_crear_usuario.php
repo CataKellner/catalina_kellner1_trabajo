@@ -50,6 +50,29 @@
 			</ul>        
 		</div>
     </header>
+	<!-- Aqui creamos la barra de navegacion de admin -->
+	<div id="usuario-cabecera">
+		<ul>
+			<li class="header-navegacion">
+				<a href="admin_panel_citas.php">Citas</a>
+			</li> 
+			<li class="header-navegacion">
+				<a href="admin_panel_noticias.php">Noticias</a>
+			</li> 
+			<li class="header-navegacion">
+				<a href="admin_perfil.php">Perfil</a>
+			</li> 
+			<li>
+				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
+			</li>
+			<li>
+			&nbsp; <a href="admin_crear_usuario.php"> + add usuario</a>
+			</li>
+			<li>
+			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
+			</li>                               
+		</ul>    
+	</div>
 	<main id="main-login">
         <div id="login">
 		<h2>Admin - create user</h2>

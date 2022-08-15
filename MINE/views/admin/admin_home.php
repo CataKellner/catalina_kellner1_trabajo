@@ -85,7 +85,7 @@ if (isset($_GET['logout'])) {
 			&nbsp; <a href="admin_crear_usuario.php"> + add usuario</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
+			&nbsp; <a href="admin_panel_usuarios.php"> + ver usuario</a>
 			</li>                               
 		</ul>    
 </div>

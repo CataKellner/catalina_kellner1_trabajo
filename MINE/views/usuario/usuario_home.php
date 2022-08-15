@@ -62,13 +62,13 @@ if (isset($_GET['logout'])) {
     <div id="usuario-cabecera-usuario">
 		<ul>
 			<li class="header-navegacion">
-				<a href="admin_citas.php">Citas</a>
+				<a href="usuario_citas.php">Citas</a>
 			</li> 
 			<li class="header-navegacion">
-				<a href="admin_noticias.php">Noticias</a>
+				<a href="usuario_noticias.php">Noticias</a>
 			</li> 
 			<li class="header-navegacion">
-				<a href="admin_perfil.php">Perfil</a>
+				<a href="usuario_perfil.php">Perfil</a>
 			</li> 
 			<li>
 				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>

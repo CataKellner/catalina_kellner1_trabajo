@@ -70,10 +70,10 @@ if (isset($_GET['logout'])) {
 	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
-				<a href="admin_citas.php">Citas</a>
+				<a href="admin_panel_citas.php">Citas</a>
 			</li> 
 			<li class="header-navegacion">
-				<a href="admin_noticias.php">Noticias</a>
+				<a href="admin_panel_noticias.php">Noticias</a>
 			</li> 
 			<li class="header-navegacion">
 				<a href="admin_perfil.php">Perfil</a>
@@ -85,7 +85,7 @@ if (isset($_GET['logout'])) {
 			&nbsp; <a href="admin_crear_usuario.php"> + add usuario</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
+			&nbsp; <a href="admin_panel_usuarios.php"> + ver usuario</a>
 			</li>                               
 		</ul>    
 </div>

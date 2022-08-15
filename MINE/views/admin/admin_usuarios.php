@@ -12,7 +12,7 @@ $result=$mysqli->query($query);
 
     <th>S.N</th>
     <th>userID </th>
-    <th>Nombre Completo</th>
+    <th>Nombre</th>
     <th>Surname</th>
     <th>Gender</th>
     <th>Email</th>

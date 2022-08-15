@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmdmosca | Presupuesto</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+</head>
+
+<body>
+    <header>   
+        <!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
+            <!--logotipo principal-->
+            <div id="header-logo">
+                <img src="../assets/svg/logo.svg" alt="logo comando mosca" id="img-logo">
+            </div>
+        <!--navegacion entre paginas-->
+            <div id="header-menu">
+                <ul>
+                    <li class="header-navegacion">
+                        <a href="../index.html">Inicio</a>
+                    </li> 
+                    <li class="header-navegacion">
+                        <a href="../views/galeria_dinamica.html">Galeria</a>
+                    </li> 
+                    <li class="header-navegacion">
+                        <a href="../views/presupuesto.html" id="estoy">Presupuesto</a>
+                    </li> 
+                    <li class="header-navegacion">
+                        <a href="../views/contacto.html">Contacto</a>
+                    </li>
+                    <li class="header-navegacion">
+                        <a href="../views/login_BCRYPT.php">login</a>
+                    </li>                                 
+                </ul>        
+            </div>
+    </header>
+    <main id="main-presupuesto">
+        <!--Aqui ira el formulario que contrendra 2 partes-->
+            <h1>Presutuesto</h1>
+            <!--Datos de contacto: Nombre, Apellido, Telefono, Email-->
+            <form id="presupuesto-formulario" action="ejemplo.php" method="get">
+                <p>Nombre: <input id="nombre" type="text" name="nombre" size="15" autocomplete="given-name" placeholder="Su nombre" pattern="[A-Za-z]{3-15}"></p>
+                <p>Apellidos: <input id="apellido" type="text" name="apellidos" size="40" autocomplete="family-name" placeholder="Sus apellidos"  pattern="[A-Za-z]{3-40}"></p>
+                <p>Teléfono: <input id="telefono" type="tel" name="telefono" size="9" autocomplete="tel" placeholder="Su telefono"></p>
+                <p>Email: <input id="email" type="email" multiple autocomplete="email" placeholder="Su email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></p>
+                <!--El presupuesto debera contener: Producto, Plazo, Extras, Presupuesto, Condiciones y Envio confimado-->
+                <div id="presuouesto">
+                    <select name="presupuesto-elegir" onchange="cambiar_servicio(this)">
+                        <option id="logo" value="350"  selected>Diseño de logotipo</option>
+                        <option id="corporativa" value="800" >Diseño de identidad corporativa</option>
+                        <option id="marca" value="1500" >Diseño de marca más naming</option>
+                    </select>
+                    <p>
+                        Semanas: 
+                        <input type="number" id="semanas" value="1" onclick="modificar_Semanas(this)">
+                    </p>
+                    <p>Elige los extras:</p>
+                        <div>
+                            <input id="extra1" type="checkbox" name="scales" value="200" onclick = "modificar_precio(this)">
+                                <label for="scales">Menor tiempo</label>
+                        </div>
+                        <div>
+                            <input id="extra2" type="checkbox" name="horns" value="5000" onclick = "modificar_precio(this)">
+                                <label for="horns">Tipografia personalizada</label>
+                        </div>
+                        <div>
+                            <input id="extra3" type="checkbox" name="horns" value="50" onclick = "modificar_precio(this)">
+                                <label for="horns">Reunion en persona</label>
+                        </div>
+                        <p>Precio total:</p>
+                        <div id="precio_Final_HTML">
+                            precios
+                        </div>
+                    </div>
+                <div id="acepto">
+                    <div>
+                        <input type="checkbox" id="acepta" name="horns" required>
+                            <label for="horns">He leido las politicas de privacidad</label>
+                    </div>
+                </div>
+                <p>
+                  <input type="submit" value="Enviar" onclick="validar(this.form);">
+                  <input type="reset" value="Borrar">
+                </p>
+            </form>
+    </main>
+    <footer>
+        <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->
+            <!--Redes sociales-->
+                <div id="footer-redes">
+                    <a href="https://www.twitch.tv/cmdmosca">
+                        <img src="../assets/svg/redes-03.svg" class="footer-redes-logo" alt="icono twitch">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCPvkjdF2-u2qwJirXD_FMGw">
+                        <img src="../assets/svg/redes-05.svg" class="footer-redes-logo" alt="icono youtube">
+                    </a>
+                    <a href="https://www.instagram.com/cmdmosca/">
+                        <img src="../assets/svg/redes-01.svg" class="footer-redes-logo" alt="icono instagram">
+                    </a>
+                    <a href="https://twitter.com/cmdmosca">
+                        <img src="../assets/svg/redes-04.svg" class="footer-redes-logo" alt="icono twitter">
+                    </a>
+                    <a href="https://www.facebook.com/search/top?q=cmdmosca%20mosca">
+                        <img src="../assets/svg/redes-02.svg" class="footer-redes-logo" alt="icono facebook">
+                    </a>
+                </div>
+            <!--Direccion de la empresa-->
+                <div id="footer-empresa">
+                    <a href="https://goo.gl/maps/KtDiZRMUc2LX58Cm9">Carrer de Jordi Villalonga i Velasco, 6, 07010 Palma, Illes Balears</a>
+                </div>
+            <!--Artado de cookis-->
+                <div id="footer-cookis">
+                    © 2022 CMD Mosca <a href="">· Términos y condiciones</a> <a href="">· Cookies </a> <a href="">· Política de privacidad</a>
+                </div>           
+    </footer>
+    <script src="../js/presupuesto.js"></script>
+</body>
+</html>

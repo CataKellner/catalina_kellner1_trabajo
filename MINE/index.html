@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmdmosca | Home</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+</head>
+
+<body>
+    <header>
+        <!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
+            <!--logotipo principal-->
+                <div id="header-logo">
+                    <img src="./assets/svg/logo.svg" alt="logo comando mosca" id="img-logo">
+                </div>
+            <!--navegacion entre paginas-->
+                <div id="header-menu">
+                    <ul>
+                        <li class="header-navegacion">
+                            <a href="./index.html" id="estoy">Inicio</a>
+                        </li> 
+                        <li class="header-navegacion">
+                            <a href="./views/galeria_dinamica.html">Galeria</a>
+                        </li> 
+                        <li class="header-navegacion">
+                            <a href="./views/presupuesto.html">Presupuesto</a>
+                        </li> 
+                        <li class="header-navegacion">
+                            <a href="./views/contacto.html">Contacto</a>
+                        </li>
+                        <li class="header_navegacion">
+                            <a href="./views/login_BCRYPT.php">login</a>
+                        </li>                                
+                    </ul>        
+                </div>
+    </header>
+        <main id="main-index">
+            <!--Tiene que haber 4 secciones, 1 de ellas sera de noticias cagadas por JSON-->
+                <!--Portada-->
+                    <div id="main-portada">
+                        <img src="./assets/img-portada/portada.jpg" alt="tres personas hablando en una mesa" id="portada-img">
+                    </div>
+                <!--Frase-->
+                    <div id="main-frase">
+                        <h1>Esto es cmd mosca y aqui hablamos de buena mierda!</h1>
+                        <img src="./assets/img-portada/podcast.svg" alt=" fondo verde con un micrófono" id="podcast-img">
+                    </div>
+                <!--Noticias con AJAX & JSON-->
+                    <div id="main-noticias">
+                        <input type="button" value="CARGAR" onclick="cargar()"> <br>
+                    </div>
+                <!--Equipo--> 
+                    <div id="main-equipo">
+                        <div class="equipo-caja">
+                            <img src="./assets/img-equipo/alen.jpg" alt="Foto de Alen" class="equipo-caja-img">
+                                <div class="main-equipo-caja-texto">
+                                    <h4>Alen Lobeiras</h4>
+                                    <h5>Diseñador gráfico</h5>
+                                    <h5>Visita su <a href="https://alenlobeiras.com">web</a></h5>
+                                </div>
+                        </div>
+                        <div class="equipo-caja">
+                            <img src="./assets/img-equipo/ady.jpg" alt="Foto de Ady" class="equipo-caja-img">
+                                <div class="main-equipo-caja-texto">
+                                    <h4>Ady.</h4>
+                                    <h5>Diseñadora gráfica</h5>
+                                    <h5>Visita su <a href="https://www.ady.design">web</a></h5>
+                                </div>
+                        </div>
+                        <div class="equipo-caja">
+                            <img src="./assets/img-equipo/cata.jpg" alt="Foto de Cata" class="equipo-caja-img">
+                                <div class="main-equipo-caja-texto">
+                                    <h4>Cata Kellner</h4>
+                                    <h5>Diseñadora gráfica</h5>
+                                    <h5>Visita su <a href="https://catakellner.com">web</a></h5>
+                                </div>
+                        </div>
+                    </div>    
+        </main>
+            <footer>
+                <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->
+                    <!--Redes sociales-->
+                        <div id="footer-redes">
+                            <a href="https://www.twitch.tv/cmdmosca">
+                                <img src="./assets/svg/redes-03.svg" class="footer-redes-logo" alt="icono twitch">
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCPvkjdF2-u2qwJirXD_FMGw">
+                                <img src="./assets/svg/redes-05.svg" class="footer-redes-logo" alt="icono youtube">
+                            </a>
+                            <a href="https://www.instagram.com/cmdmosca/">
+                                <img src="./assets/svg/redes-01.svg" class="footer-redes-logo" alt="icono instagram">
+                            </a>
+                            <a href="https://twitter.com/cmdmosca">
+                                <img src="./assets/svg/redes-04.svg" class="footer-redes-logo" alt="icono twitter">
+                            </a>
+                            <a href="https://www.facebook.com/search/top?q=cmdmosca%20mosca">
+                                <img src="./assets/svg/redes-02.svg" class="footer-redes-logo" alt="icono facebook">
+                            </a>
+                        </div>
+                    <!--Direccion de la empresa-->
+                        <div id="footer-empresa">
+                            <a href="https://goo.gl/maps/KtDiZRMUc2LX58Cm9">Carrer de Jordi Villalonga i Velasco, 6, 07010 Palma, Illes Balears</a>
+                        </div>
+                    <!--Artado de cookis-->
+                        <div id="footer-cookis">
+                            © 2022 CMD Mosca <a href="">· Términos y condiciones</a> <a href="">· Cookies </a> <a href="">· Política de privacidad</a>
+                        </div>           
+            </footer>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script src="./js/noticias.js"></script>
+</body>
+</html>

@@ -82,16 +82,7 @@ if (isset($_GET['logout'])) {
 				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_panel_usuarios_crear.php"> + add usuario</a>
-			</li>
-			<li>
-			&nbsp; <a href="admin_panel_usuarios.php"> + ver usuario</a>
-			</li>
-			<li>
-			&nbsp; <a href="admin_panel_noticias_crear.php"> + crear noticia</a>
-			</li>
-			<li>
-			&nbsp; <a href="admin_panel_citas_crear.php"> + crear cita</a>
+			&nbsp; <a href="admin_panel_usuarios.php">usuarios</a>
 			</li>
 		</ul>
 </div>

@@ -78,6 +78,9 @@ $result=$mysqli->query($query);
 		</ul>
   </div>
     <main id="main-login">
+
+      <div><button type="button"><a href="admin_panel_usuarios_crear.php">Crear Usuario</a></button></div>
+
       <div id="login">
         <table border ="1" cellspacing="0" cellpadding="10">
           <tr>

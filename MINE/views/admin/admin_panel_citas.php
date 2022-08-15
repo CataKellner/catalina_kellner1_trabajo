@@ -82,6 +82,9 @@ $result=$mysqli->query($query);
 		</ul>
 </div>
 <main id="main-login">
+
+<div><button type="button"><a href="admin_panel_citas_crear.php">Crear Cita</a></button></div>
+
   <div id="login">
     <table border ="1" cellspacing="0" cellpadding="10">
       <tr>

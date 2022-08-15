@@ -11,13 +11,80 @@ if(isset($_POST["btn_actualizar_datos_usuario"])){
 }
 
 
-if(isset($_POST["btn_actualizar_datos_usuario"])){
-  actualizar_datos_usuario($_POST['idUser']);
+if(isset($_POST["btn_crear_nueva_cita"])){
+  crear_cita();
 }
 
 function crear_cita(){
 
-  
+  global $mysqli;
+
+  $fecha_cita = $motivo = "";
+
+  // $rol = $_POST['rol'];
+
+  // $usuario = $_POST['usuario'];
+  // $email = $_POST['email'];
+  // $pass = password_hash($_POST["password"], PASSWORD_BCRYPT);
+  // $pass=BCRYPT($_POST["password"]);
+
+  if(isset($_POST['fecha_cita']))
+  {$fecha_cita = $_POST['fecha_cita'];};
+
+  if(isset($_POST['motivo']))
+  {$motivo = $_POST['motivo'];};
+
+
+  $sqlCitas="SELECT `idCitas`, `fecha_cita`, `motivo` FROM `citas` WHERE 1";
+  // $sql.=" AND `usuario` = '".$usuario."'";
+
+  // Almacena el resultado de la query, false si ha fallado, true si ha ido bien
+  // Almacena el objeto resultante de la query (contiene informacion de la query)
+  $rs=$mysqli->query($sqlCitas);
+
+  // Obtiene el numero de filas y si es mayor que 0 no crea el usuario
+  // si es 0, no existe fila con ese usuario, crea el usuario
+  if  ($rs->num_rows>0){
+      // el usuario existe
+      // no lo crea
+  } else {
+      // el usuario no existe
+      // lo crea
+
+      // Rellenamos User data con los datos del formulario
+      $sql6= "INSERT INTO citas(fecha_cita, motivo) VALUES ('".$fecha_cita."','".$motivo."')";
+      $ql = $mysqli->query($sql6);
+
+      // $consulta = "SELECT * FROM users_data WHERE email = '".$email."'";
+
+      // $ql = $mysqli->query($consulta);
+
+      // $fila = $ql->fetch_array();
+
+      // $x = null;
+
+      //     while($fila)
+      //     {
+      //         $x = $fila[0];
+
+      //         $fila = $ql->fetch_array();
+      //     }
+
+      // Rellenamos User login con los datos de la sesion
+      // $sql= "INSERT INTO users_login(idUser, usuario, password, rol) VALUES ('".$x."','".$usuario."', '".$pass."','".$rol."')";
+      // $rs = $mysqli->query($sql);
+
+
+          // if($rs){
+          //   // echo "NO la has liado";
+
+          // }else{
+          //   // echo "la has liado";
+          //     echo $sql;
+          //     echo "Errormessage: %s\n", mysqli_error($mysqli);
+          }
+
+      $mysqli->close();
 
 }
 

@@ -10,12 +10,13 @@ function rellenar_datos(){
 
   // selec user where ID = post received
   $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data";
-$result=$mysqli->query($query);
-if (mysqli_num_rows($result) > 0) {
-  $sn=1;
-  while($data = mysqli_fetch_assoc($result)) {$sn++;}
-}
-  else {}
+  $result=$mysqli->query($query);
+  $data = mysqli_fetch_assoc($result);
+// if (mysqli_num_rows($result) > 0) {
+//   $sn=1;
+//   while($data = mysqli_fetch_assoc($result)) {$sn++;}
+// }
+//   else {}
 }
 
 ?>

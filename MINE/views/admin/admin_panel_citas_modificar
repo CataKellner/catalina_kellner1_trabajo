@@ -11,8 +11,7 @@ $s_Telefono = "";
 $s_Genero = "";
 
 // receive id by button
-echo $_POST['editar_usuario'];
-rellenar_datos($_POST['editar_usuario']);
+rellenar_datos($_POST['editar_cita']);
 
 function rellenar_datos($id){
 

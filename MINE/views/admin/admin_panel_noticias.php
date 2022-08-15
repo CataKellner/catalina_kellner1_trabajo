@@ -15,7 +15,7 @@ $result=$mysqli->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cmdmosca | user</title>
     <link rel="stylesheet" href="../../css/estilos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
@@ -29,7 +29,7 @@ $result=$mysqli->query($query);
 	</style> -->
 </head>
 <body>
-	<header> 
+	<header>
 	<!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
 		<!--logotipo principal-->
 		<div id="header-logo">
@@ -40,20 +40,20 @@ $result=$mysqli->query($query);
 			<ul>
 				<li class="header-navegacion">
 					<a href="../../index.html">Inicio</a>
-				</li> 
+				</li>
 				<li class="header-navegacion">
 					<a href="../../views/galeria_dinamica.html">Galeria</a>
-				</li> 
+				</li>
 				<li class="header-navegacion">
 					<a href="../../views/presupuesto.html">Presupuesto</a>
-				</li> 
+				</li>
 				<li class="header-navegacion">
 					<a href="../../views/contacto.html">Contacto</a>
-				</li>   
+				</li>
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
-				</li>                                 
-			</ul>        
+				</li>
+			</ul>
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
@@ -61,23 +61,23 @@ $result=$mysqli->query($query);
 		<ul>
 			<li class="header-navegacion">
 				<a href="admin_panel_citas.php">Citas</a>
-			</li> 
+			</li>
 			<li class="header-navegacion">
 				<a href="admin_panel_noticias.php">Noticias</a>
-			</li> 
+			</li>
 			<li class="header-navegacion">
 				<a href="admin_perfil.php">Perfil</a>
-			</li> 
+			</li>
 			<li>
 				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_crear_usuario.php"> + add usuario</a>
+			&nbsp; <a href="admin_panel_usuarios_crear.php"> + add usuario</a>
 			</li>
 			<li>
 			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
-			</li>                               
-		</ul>    
+			</li>
+		</ul>
   </div>
     <main id="main-login">
       <div id="login">
@@ -138,7 +138,7 @@ $result=$mysqli->query($query);
             <!--Artado de cookis-->
                 <div id="footer-cookis">
                     © 2022 CMD Mosca <a href="">· Términos y condiciones</a> <a href="">· Cookies </a> <a href="">· Política de privacidad</a>
-                </div>           
+                </div>
     </footer>
 </body>
 </html>

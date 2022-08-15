@@ -3,10 +3,7 @@ include ("bd.php");
 session_start();
 
 if(isset($_POST["crear_nuevo_usuario"])){
-  create_new_user();
-}
-if(isset($_POST["show_data"])){
-  showdata();
+  crear_nuevo_usuario();
 }
 
 if(isset($_POST["btn_actualizar_datos_usuario"])){
@@ -23,8 +20,8 @@ function actualizar_datos_usuario($idUser){
   $genero = $_POST['genero'];
     //update user UPDATE SET where userid = $userid
 
-    $sqlData="UPDATE users_data SET nombre = '$nombre', apellidos = '$apellidos', email = '$email', telefono = '$telefono', fecha_nacimiento = '$fecha_nacimiento', direccion = '$direccion', genero = '$genero' WHERE condition"; 
-    
+    $sqlData="UPDATE users_data SET nombre = '$nombre', apellidos = '$apellidos', email = '$email', telefono = '$telefono', fecha_nacimiento = '$fecha_nacimiento', direccion = '$direccion', genero = '$genero' WHERE condition";
+
     if ($mysqli->query($sql) === TRUE) {
       echo "Record updated successfully";
     } else {
@@ -32,45 +29,8 @@ function actualizar_datos_usuario($idUser){
     }
   }
 
-function showdata(){
 
-  // header("Location: /MINE/index.html");
-  global $mysqli;
-
-  $sql="SELECT `idlogin`, `idUser`, `usuario`, `password`, `rol` FROM `users_login`";
-
-  $rs = $mysqli->query($sql);
-
-  $int_Col = 1;
-  echo("<table>");
-  while($row = mysqli_fetch_array($rs))
-  {
-      if ($int_Col == 1) {
-         echo("<tr>");
-      }
-
-      echo("<td>");
-      echo("<a href='" . $row['usuario'] . "'>" . $row['idlogin'] . "</a><br>");
-      // echo("<img src=\"" . $row['image'] . "\"><br>");
-      echo($row['rol'] . "<br><br>");
-      echo("</td>");
-
-      if ($int_Col == 3) {
-          echo("</tr>");
-          $int_Col = 1;
-      } else {
-        $int_Col++;
-      }
-  }
-
-  if ($int_Col > 1) {
-     echo("<td colspan='". (3 - $int_Col) ."'>&nbsp;</td></tr>");
-  }
-  echo("</table>");
-
-}
-
-function create_new_user(){
+function crear_nuevo_usuario(){
 
   global $mysqli;
 

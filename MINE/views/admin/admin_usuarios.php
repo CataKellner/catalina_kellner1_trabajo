@@ -11,7 +11,7 @@ $result=$mysqli->query($query);
   <tr>
 
     <th>S.N</th>
-    <th>ID </th>
+    <th>userID </th>
     <th>Full Name</th>
     <th>Surname</th>
     <th>Gender</th>

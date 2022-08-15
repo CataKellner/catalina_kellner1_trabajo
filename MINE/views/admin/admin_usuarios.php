@@ -11,8 +11,8 @@ $result=$mysqli->query($query);
   <tr>
 
     <th>S.N</th>
-    <th>ID </th>
-    <th>Nombrecito</th>
+    <th>userID </th>
+    <th>Nombre Completo</th>
     <th>Surname</th>
     <th>Gender</th>
     <th>Email</th>

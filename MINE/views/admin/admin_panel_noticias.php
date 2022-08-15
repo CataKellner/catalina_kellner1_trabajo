@@ -3,7 +3,7 @@
 <?php
 include('../../PHP/bd.php');
 include('../../PHP/metodos_admin.php');
-$query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data";
+$query = "SELECT idNoticias, idUser, titulo, imagen, fecha FROM noticias";
 $result=$mysqli->query($query);
 // $result = mysqli_query($mysqli, $query);
 ?>
@@ -30,12 +30,9 @@ if (mysqli_num_rows($result) > 0) {
    <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
    <td><?php echo $sn; ?> </td>
    <td><form action="admin_usuarios.php" method="post" id="btn_standard"><input type="submit" value="<?php echo $data['idUser'] ?>" name="editar_usuario"></td>
-   <td><?php echo $data['nombre']; ?> </td>
-   <td><?php echo $data['apellidos']; ?> </td>
-   <td><?php echo $data['genero']; ?> </td>
-   <td><?php echo $data['email']; ?> </td>
-   <td><?php echo $data['telefono']; ?> </td>
-   <td><?php echo $data['direccion']; ?> </td>
+   <td><?php echo $data['titulo']; ?> </td>
+   <td><?php echo $data['imagen']; ?> </td>
+   <td><?php echo $data['fecha']; ?> </td>
  <tr>
  <?php
   $sn++;}} else { ?>

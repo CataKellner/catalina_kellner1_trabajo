@@ -79,31 +79,22 @@ if (isset($_GET['logout'])) {
 				<a href="admin_perfil.php">Perfil</a>
 			</li>
 			<li>
-				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
+			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_panel_usuarios.php">usuarios</a>
+				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 		</ul>
 </div>
 	<main id="main-login">
         <div id="login">
 			<!-- <div class="header"> -->
-				<h2>Admin - Home Page</h2>
+				<h2>Bienvenido a cmdmosca!</h2>
+
+
 			<!-- </div> -->
 			<div class="content">
-				<p><?php echo $_SESSION['idUser']; ?></p>
-				<!-- notification message -->
-				<?php if (isset($_SESSION['success'])) : ?>
-					<div class="error success" >
-						<h3>
-							<?php
-								echo $_SESSION['success'];
-								unset($_SESSION['success']);
-							?>
-						</h3>
-					</div>
-				<?php endif ?>
+
 
 				<!-- logged in usuario information -->
 				<div class="profile_info">
@@ -114,14 +105,17 @@ if (isset($_GET['logout'])) {
 							<strong><?php echo $_SESSION['usuario']; ?></strong>
 
 							<small>
-								<i  style="color: #888;">(<?php echo ucfirst($_SESSION['rol']); ?>)</i>
-								<br>
-								<a href="admin_home.php?logout='1'" style="color: red;">logout</a>
+								<i  style="color: #00ff79;">(<?php echo ucfirst($_SESSION['rol']); ?>)</i>
+								<br></br>
+								<!-- <a href="admin_home.php?logout='1'" style="color: red;">logout</a>
 							&nbsp; <a href="admin_panel_usuarios_crear.php"> + add usuario</a>
 													&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
-							</small>
-
+							</small> -->
 						<?php endif ?>
+
+						<div id="imagen-home-gif">
+							<img src="../../assets/gif/mosca.gif">
+						</div>
 					</div>
 				</div>
 			</div>

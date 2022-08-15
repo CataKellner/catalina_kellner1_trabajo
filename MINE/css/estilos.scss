@@ -84,11 +84,11 @@ header{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     z-index: 3;
-    background-color: $verde;
+    background-color:$verde;
     ul{
         font-size: 12px;
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(5, 1fr);
         text-align: center;
         list-style: none;
         li{

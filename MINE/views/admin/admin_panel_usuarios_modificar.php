@@ -3,6 +3,13 @@
 include ("../../PHP/metodos_admin.php");
 //session_start();
 
+$s_Nombre = "";
+$s_Apellidos = "";
+$s_Email = "";
+$s_Direccion = "";
+$s_Telefono = "";
+$s_Genero = "";
+
 // receive id by button
 echo $_POST['editar_usuario'];
 rellenar_datos($_POST['editar_usuario']);
@@ -10,11 +17,24 @@ rellenar_datos($_POST['editar_usuario']);
 function rellenar_datos($idUser){
 
   global $mysqli;
+
+  global $s_Nombre;
+  global $s_Apellidos;
+  global $s_Email;
+  global $s_Direccion;
+  global $s_Telefono;
+  global $s_Genero;
   // selec user where ID = post received
 
   $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data WHERE idUser = $idUser";
   $result=$mysqli->query($query);
   $data = mysqli_fetch_assoc($result);
+  $s_Nombre = $data['idUser'];
+  $s_Apellidos = $data['apellidos'];
+  $s_Email =$data['email'] ;
+  $s_Direccion =$data['direccion'] ;
+  $s_Telefono = $data['telefono'];
+  $s_Genero =$data['genero'] ;
 // if (mysqli_num_rows($result) > 0) {
 //   $sn=1;
 //   while($data = mysqli_fetch_assoc($result)) {$sn++;}
@@ -27,7 +47,7 @@ function rellenar_datos($idUser){
 <!-- // show data on inputs -->
 <form action="admin_panel_usuarios_modificar.php" method="post" id="datos_usuario">
   <p>ID</p>
-  <input type="text" value="<?php echo $data['idUser'] ?>" name="idUser">
+  <input type="text" value="<?php echo $s_Nombre ?>" name="idUser">
   <p>Nombre</p>
   <input type="text" name="nombre" id="nombre"
   size="15" autocomplete="given-name" value="<?php echo $data['nombre']; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >

@@ -15,25 +15,26 @@ $s_titulo = $_POST['titulo'];
 $s_texto = $_POST['texto'];
 $s_idUser = $_SESSION['idUser'];
 echo $_SESSION['idUser'];
-// $filePath="" . $_FILES["file"]["name"];
-// // $Type = $_POST['type'];
+$filePath="" . $_FILES["file"]["name"];
+// $Type = $_POST['type'];
 
-//  if ($_FILES["file"]["error"] > 0)
-//   {
-//      echo "Error: NO CHOSEN FILE <br />";
-//      echo"INSERT TO DATABASE FAILED";
-//    }
-//    else
-//    {
-//      move_uploaded_file($_FILES["file"]["tmp_name"], __DIR__ . "/upload/" . $_FILES["file"]["name"]);
-//      echo"SAVED<br>";
-//    }
+if ($_FILES["file"]["error"] > 0)
+  {
+    echo "Error: NO CHOSEN FILE <br />";
+    echo"INSERT TO DATABASE FAILED";
+  }
+else
+  {
+    move_uploaded_file($_FILES["file"]["tmp_name"], __DIR__ . "/upload/" . $_FILES["file"]["name"]);
+    echo"SAVED<br>";
+  }
 
 
 
   $sql = "INSERT INTO noticias(idUser, titulo, imagen, fecha) VALUES (97,'".$s_titulo."','".$s_texto."',curdate())";
   if (mysqli_query($mysqli, $sql)) {
-    echo "Record updated successfully";
+    echo "Record updated successfully<br>";
+    echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
   } else {
     echo "Error updating record: " . mysqli_error($mysqli);
   }

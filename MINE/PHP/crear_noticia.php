@@ -1,36 +1,13 @@
 <?php
+include ("bd.php");
+
 if(isset($_POST['add']))
 {
-$dbhost = '';
-$dbuser = '';
-$dbpass = '';
-$db_name = 'upgrade';
-$tbl_name = 'Testimonials';
-$ftp_user = '';
-$ftp_pass = '';
-$conn = mysql_connect($dbhost, $dbuser, $dbpass);
-if(! $conn )
-{
-  die('Could not connect: ' . mysql_error());
-}
-mysql_select_db("$db_name")or die("cannot select DB");
-
-
-$ftp_server = "";
-$ftp_conn = ftp_connect($ftp_server) or die("Could not connect to $ftp_server");
-// login with username and password
-$login_result = ftp_login($ftp_conn, $ftp_user, $ftp_pass);
-
-
-// check connection
-if ((!$ftp_conn) || (!$login_result)) {
-       echo "FTP connection has failed!";
-       echo "Attempted to connect to $ftp_server for user $ftp_user";
-       exit;
-   } else {
-       echo "Connected to $ftp_server, for user $ftp_user";
+    echo "button create new workin";
  }
 
+ $db_name = 'upgrade';
+ $tbl_name = 'Testimonials';
 
 $Fname = $_POST['fname'];
 $Email = $_POST['email'];
@@ -50,16 +27,15 @@ $Type = $_POST['type'];
 
 
 
-$query_image = "INSERT INTO $tbl_name (fname, email, content, image,type, submission_date) VALUES ('$Fname','$Email','$Content','$filePath','$Type',curdate())";
-if(mysql_query($query_image))
-{
-echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
-}
-else
-{
-echo 'File name not stored in database';
-}
-}
+  $query_image = "INSERT INTO $tbl_name (fname, email, content, image,type, submission_date) VALUES ('$Fname','$Email','$Content','$filePath','$Type',curdate())";
+  if(mysql_query($query_image))
+  {
+    echo "Stored in: " . "upload/" . $_FILES["file"]["name"];
+  }
+  else
+  {
+    echo 'File name not stored in database';
+  }
 }
 
 

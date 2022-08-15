@@ -1,4 +1,4 @@
-<form method="post"  enctype="multipart/form-data" action="/testimonials/file_upload.php">
+<form method="post"  enctype="multipart/form-data" action="../../PHP/crear_noticia.php">
 <table>
 <tr>
 <td width="250">Name</td>

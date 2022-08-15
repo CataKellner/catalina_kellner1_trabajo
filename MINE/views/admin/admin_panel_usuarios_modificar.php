@@ -11,8 +11,8 @@ $s_Telefono = "";
 $s_Genero = "";
 
 // receive id by button
-echo $_POST['editar_usuario'];
-rellenar_datos($_POST['editar_usuario']);
+// echo $_POST['editar_usuario'];
+// rellenar_datos($_POST['editar_usuario']);
 
 function rellenar_datos($id){
 
@@ -55,7 +55,9 @@ function rellenar_datos($id){
   <p>Apellidos</p>
   <input type="text" value="<?php echo  $s_Apellidos; ?>" name="apellidos">
   <p>Telefono</p>
-  <input type="text" value="<?php echo $s_Email; ?>" name="telefono">
+  <input type="text" value="<?php echo $s_Telefono; ?>" name="telefono">
+  <p>Email</p>
+  <input type="text" value="<?php echo $s_Email; ?>" name="email">
   <p>Nacimiento</p>
   <input type="date" value="<?php echo $s_fecha_nacimiento; ?>" name="fecha_nacimiento" id="fecha_nacimiento">
   <p>Direccion</p>

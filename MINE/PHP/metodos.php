@@ -30,7 +30,7 @@ function login(){
   $user = $_POST["usuario"];
   $pass = $_POST["password"];
 
-  $sql="SELECT `idlogin`/*, `idUser`*/, `usuario`, `password`, `rol` FROM `users_login` WHERE 1";
+  $sql="SELECT `idlogin`, `idUser`, `usuario`, `password`, `rol` FROM `users_login` WHERE 1";
   $sql.=" AND `usuario` = '".$user."'";
 
   $rs=$mysqli->query($sql);
@@ -43,6 +43,7 @@ function login(){
               $_SESSION["usuario"]=$fila["usuario"];
               $_SESSION["password"]=$fila["password"];
               $_SESSION["rol"]=$fila["rol"];
+              $_SESSION["idUser"]=$fila["idUser"];
               
 
               if($_SESSION["rol"] == "admin"){

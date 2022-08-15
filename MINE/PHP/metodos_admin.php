@@ -10,7 +10,37 @@ if(isset($_POST["btn_actualizar_datos_usuario"])){
   actualizar_datos_usuario($_POST['idUser']);
 }
 
+
+if(isset($_POST["btn_actualizar_datos_usuario"])){
+  actualizar_datos_usuario($_POST['idUser']);
+}
+
+function crear_cita(){
+
+  
+
+}
+
+function actualizar_cita(){
+  global $mysqli;
+
+  $fecha_cita = $_POST['fecha_cita'];
+  $motivo = $_POST['motivo'];
+    //update user UPDATE SET where userid = $userid
+
+    $sqlCitas="UPDATE citas SET fecha_cita = '$fecha_cita', motivo = '$motivo' WHERE idUser=$idUser";
+
+    if ($mysqli->query($sqlCitas) === TRUE) {
+      echo "Record updated successfully";
+    } else {
+      echo "Error updating record: " . $mysqli->error;
+    }
+}
+
 function actualizar_datos_usuario($idUser){
+
+  global $mysqli;
+
   $nombre = $_POST['nombre'];
   $apellidos = $_POST['apellidos'];
   $email = $_POST['email'];
@@ -20,9 +50,9 @@ function actualizar_datos_usuario($idUser){
   $genero = $_POST['genero'];
     //update user UPDATE SET where userid = $userid
 
-    $sqlData="UPDATE users_data SET nombre = '$nombre', apellidos = '$apellidos', email = '$email', telefono = '$telefono', fecha_nacimiento = '$fecha_nacimiento', direccion = '$direccion', genero = '$genero' WHERE condition";
+    $sqlData="UPDATE users_data SET nombre = '$nombre', apellidos = '$apellidos', email = '$email', telefono = '$telefono', fecha_nacimiento = '$fecha_nacimiento', direccion = '$direccion', genero = '$genero' WHERE idUser=$idUser";
 
-    if ($mysqli->query($sql) === TRUE) {
+    if ($mysqli->query($sqlData) === TRUE) {
       echo "Record updated successfully";
     } else {
       echo "Error updating record: " . $mysqli->error;

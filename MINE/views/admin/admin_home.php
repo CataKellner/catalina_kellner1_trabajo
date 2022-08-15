@@ -87,6 +87,12 @@ if (isset($_GET['logout'])) {
 			<li>
 			&nbsp; <a href="admin_panel_usuarios.php"> + ver usuario</a>
 			</li>
+			<li>
+			&nbsp; <a href="admin_panel_noticias_crear.php"> + crear noticia</a>
+			</li>
+			<li>
+			&nbsp; <a href="admin_panel_citas_crear.php"> + crear cita</a>
+			</li>
 		</ul>
 </div>
 	<main id="main-login">
@@ -95,6 +101,7 @@ if (isset($_GET['logout'])) {
 				<h2>Admin - Home Page</h2>
 			<!-- </div> -->
 			<div class="content">
+				<p><?php echo $_SESSION['idUser']; ?></p>
 				<!-- notification message -->
 				<?php if (isset($_SESSION['success'])) : ?>
 					<div class="error success" >

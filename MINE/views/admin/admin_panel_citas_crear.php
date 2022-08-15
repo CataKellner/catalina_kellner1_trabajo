@@ -80,19 +80,19 @@
 
 	<form method="post" action="admin_panel_citas_crear.php">
 
-		<?php echo display_error(); ?>
+		
 
 		<div class="input-group">
-			<label>Username</label>
-			<input type="text" name="usuario" value="<?php echo $fecha; ?>">
+			<label>Fecha</label>
+			<input type="date" name="fecha_cita" value="">
 		</div><br>
 		<div class="input-group">
-			<label>Name</label>
-			<input type="text" name="nombre" value="<?php echo $motivo; ?>">
+			<label>motivo</label>
+			<input type="text" name="motivo" value="">
 		</div><br>
 
 		<div class="input-group">
-			<button type="submit" class="btn" name="crear_nuevo_usuario"> + Create user</button>
+			<button type="submit" class="btn" name="btn_crear_nueva_cita"> + Crear cita</button>
 		</div>
 	</form>
 	</div>

@@ -1,6 +1,7 @@
 
 
 <?php
+// include ("admin_panel_usuarios_modificar.php");
 include('../../PHP/bd.php');
 include('../../PHP/metodos_admin.php');
 $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data";

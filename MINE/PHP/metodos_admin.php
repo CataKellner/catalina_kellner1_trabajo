@@ -9,6 +9,15 @@ if(isset($_POST["show_data"])){
   showdata();
 }
 
+if(isset($_POST["btn_actualizar_datos_usuario"])){
+  actualizar_datos_usuario();
+}
+
+function actualizar_datos_usuario($idUser){
+
+    //update user UPDATE SET where userid = $userid
+}
+
 function showdata(){
 
   // header("Location: /MINE/index.html");

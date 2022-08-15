@@ -1,5 +1,4 @@
 <?php
-// include ("admin_panel_usuarios_modificar.php");
 include('../../PHP/bd.php');
 include('../../PHP/metodos_admin.php');
 $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data";
@@ -101,7 +100,7 @@ $result=$mysqli->query($query);
 
             <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
             <td><?php echo $sn; ?> </td>
-            <td><form action="admin_usuarios.php" method="post" id="btn_standard"><input type="submit"
+            <td><form action="admin_panel_usuarios_modificar.php" method="post" id="btn_standard"><input type="submit"
               value="<?php echo $data['idUser'] ?>" name="editar_usuario"></td>
             <td><?php echo $data['nombre']; ?> </td>
             <td><?php echo $data['apellidos']; ?> </td>

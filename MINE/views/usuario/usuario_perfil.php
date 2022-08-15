@@ -1,5 +1,5 @@
 <?php
-include('metodos.php');
+include('../../PHP/metodos.php');
 include('metodos_user.php');
 if (!isLoggedIn()) {
 	$_SESSION['msg'] = "You must log in first";

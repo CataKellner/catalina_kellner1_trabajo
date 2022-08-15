@@ -10,13 +10,27 @@ if(isset($_POST["show_data"])){
 }
 
 if(isset($_POST["btn_actualizar_datos_usuario"])){
-  actualizar_datos_usuario();
+  actualizar_datos_usuario($_POST['idUser']);
 }
 
 function actualizar_datos_usuario($idUser){
-
+  $nombre = $_POST['nombre'];
+  $apellidos = $_POST['apellidos'];
+  $email = $_POST['email'];
+  $telefono = $_POST['telefono'];
+  $fecha_nacimiento = $_POST['fecha_nacimiento'];
+  $direccion = $_POST['direccion'];
+  $genero = $_POST['genero'];
     //update user UPDATE SET where userid = $userid
-}
+
+    $sqlData="UPDATE users_data SET nombre = '$nombre', apellidos = '$apellidos', email = '$email', telefono = '$telefono', fecha_nacimiento = '$fecha_nacimiento', direccion = '$direccion', genero = '$genero' WHERE condition"; 
+    
+    if ($mysqli->query($sql) === TRUE) {
+      echo "Record updated successfully";
+    } else {
+      echo "Error updating record: " . $mysqli->error;
+    }
+  }
 
 function showdata(){
 

@@ -26,13 +26,14 @@ function rellenar_datos($id){
   global $s_Genero;
   // selec user where ID = post received
 
-  $query = "SELECT idUser, nombre, apellidos, email, direccion, telefono, genero FROM users_data WHERE idUser = $id";
+  $query = "SELECT idUser, nombre, apellidos, email, fecha_nacimiento, direccion, telefono, genero FROM users_data WHERE idUser = $id";
   $result=$mysqli->query($query);
   $data = mysqli_fetch_assoc($result);
   $s_Nombre = $data['nombre'];
   $s_Apellidos = $data['apellidos'];
   $s_Email =$data['email'] ;
   $s_Direccion =$data['direccion'] ;
+  $s_fecha_nacimiento =$data['fecha_nacimiento'] ;
   $s_Telefono = $data['telefono'];
   $s_Genero =$data['genero'] ;
 // if (mysqli_num_rows($result) > 0) {
@@ -52,13 +53,13 @@ function rellenar_datos($id){
   <input type="text" name="nombre" id="nombre"
   size="15" autocomplete="given-name" value="<?php echo $s_Nombre; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
   <p>Apellidos</p>
-  <input type="text" value="<?php echo $data['apellidos']; ?>" name="apellidos">
+  <input type="text" value="<?php echo  $s_Apellidos; ?>" name="apellidos">
   <p>Telefono</p>
-  <input type="text" value="<?php echo $data['telefono']; ?>" name="telefono">
+  <input type="text" value="<?php echo $s_Email; ?>" name="telefono">
   <p>Nacimiento</p>
-  <input type="date" value="<?php echo $data['fecha_nacimiento']; ?>" name="fecha_nacimiento" id="fecha_nacimiento">
+  <input type="date" value="<?php echo $s_fecha_nacimiento; ?>" name="fecha_nacimiento" id="fecha_nacimiento">
   <p>Direccion</p>
-  <input type="text" value ="<?php echo $data['direccion']; ?>" name="direccion" id="direccion" ><br>
+  <input type="text" value ="<?php echo $s_Direccion; ?>" name="direccion" id="direccion" ><br>
   <p>Genero</p>
   <select name="genero">
       <option type="text" id="mujer" value="mujer"  selected>Mujer</option>

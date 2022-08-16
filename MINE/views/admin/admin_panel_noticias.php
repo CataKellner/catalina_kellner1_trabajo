@@ -80,7 +80,7 @@ $result=$mysqli->query($query);
 
       
       <div id="login">
-        
+      <h2>Noticas</h2>
       <div>
         <button type="button">
           <a href="admin_panel_noticias_crear.php">Crear Noticia</a>

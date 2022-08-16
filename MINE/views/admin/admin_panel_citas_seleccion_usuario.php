@@ -77,6 +77,8 @@ $result=$mysqli->query($query);
     <main id="main-login">
 
       <div id="login">
+      <h2>Usuarios citas</h2>
+
         <table border ="1" cellspacing="0" cellpadding="10">
           <tr>
             <th>S.N</th>

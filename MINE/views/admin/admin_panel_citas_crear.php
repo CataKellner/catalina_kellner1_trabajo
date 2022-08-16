@@ -73,7 +73,7 @@
 	</div>
 	<main id="main-login">
         <div id="login">
-		<h2>Admin - create user</h2>
+		<h2>Crear cita</h2>
 
 
 	<form method="post" action="admin_panel_citas_crear.php">

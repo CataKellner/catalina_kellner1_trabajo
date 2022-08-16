@@ -80,12 +80,7 @@ $result=$mysqli->query($query);
 </div>
 <main id="main-login">
 
-<<<<<<< Updated upstream
-=======
-<div><button type="button"><a href="admin_panel_citas_seleccion_usuario.php">Crear Cita</a></button></div>
->>>>>>> Stashed changes
 
-  
   <div id="login">
   <h2>Citas</h2>
   <br>

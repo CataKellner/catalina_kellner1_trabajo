@@ -1,3 +1,6 @@
+<?php include('../../PHP/metodos.php') ?>
+<?php include('../../PHP/metodos_admin.php') ?>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,14 +13,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-	<!-- <style>
-	.header {
-		background: #003366;
-	}
-	button[name=register_btn] {
-		background: #003366;
-	}
-	</style> -->
+	<style>
+		.header {
+			background: #003366;
+		}
+		button[name=crear_nuevo_usuario] {
+			background: #003366;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -42,13 +45,13 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/login_BCRYPT.php" id="estoy">login</a>
 				</li>
 			</ul>
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div <div id="usuario-cabecera">
+	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
 				<a href="admin_panel_citas.php">Citas</a>
@@ -67,62 +70,33 @@
 			</li>
 		</ul>
 </div>
-    <main id="main-login">
+	</div>
+	<main id="main-login">
+        <div id="login">
+		<h2>Crear cita</h2>
 
 
-      <div id="login">
-      <h2>Crear noticas</h2>
+	<form method="post" action="usuario_citas_crear.php">
 
 
-<form method="post"  enctype="multipart/form-data" action="crear_noticia.php">
-<table>
-<tr>
-<td width="250">Name</td>
-<td>
-<input name="titulo" type="text" id="fname" />
-</td>
-</tr>
-<!-- <tr>
-<td width="250">Email: (will not be publicized)</td>
-<td>
-<input name="email" type="text" id="email" /><br />
-</td>
-</tr> -->
-<!-- <tr>
-<td width="250">Client Type</td>
-<td id="mainselection">
-<select name="type" id="type">
-    <option></option>
-    <option value="Residential">Residential</option>
-    <option value="Business">Business</option>
 
-</select> -->
-</td>
-</tr>
-<tr>
-<td width="250">Comments</td>
-<td>
-<textarea id="content" name="texto" rows="10" cols="50" style="border-style:groove;box-shadow: none;"placeholder="Please describe your experience"></textarea>
-</td>
-</tr>
+		<div class="input-group">
+			<label>Fecha</label>
+			<input type="date" name="fecha_cita" value="">
+			<br>
+			<label>motivo</label>
+			<input type="text" name="motivo" value="">
+			<br>
+			<label>usuario</label>
+			<input type="text" name="idUser" value="<?php echo $_SESSION['idUser'] ?>">
+		</div><br>
 
-<tr>
-<td width="250">Image</td>
-<td>
-<input name="file" type="file" id="archivo">
-</td>
-</tr>
 
-<tr>
-<td width="250"> </td>
-<td>
-<input name="add" type="submit" id="add" value="Add Testimonial">
-</td>
-</tr>
-</table>
-</form>
-
-</div>
+		<div class="input-group">
+			<button type="submit" class="btn" name="btn_crear_nueva_cita"> + Crear cita</button>
+		</div>
+	</form>
+	</div>
     </main>
 	<footer>
         <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->

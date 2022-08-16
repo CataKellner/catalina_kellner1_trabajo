@@ -44,7 +44,7 @@ function login(){
               $_SESSION["password"]=$fila["password"];
               $_SESSION["rol"]=$fila["rol"];
               $_SESSION["idUser"]=$fila["idUser"];
-              
+
 
               if($_SESSION["rol"] == "admin"){
                 header("Location: admin/admin_home.php");
@@ -140,21 +140,17 @@ function register(){
       $sql= "INSERT INTO users_login(idUser, usuario, password, rol) VALUES ('".$x."','".$usuario."', '".$pass."','usuario')";
       $rs = $mysqli->query($sql);
 
-      $_SESSION["userID"] = $x;
+      $_SESSION["idUser"] = $x;
       // $logged_in_user_id = mysqli_insert_id($mysqli);
       // $_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 
           if($rs){
             // echo "NO la has liado";
-            // Si es admin
-            if($_SESSION["rol"] == "admin")
-            {
-              header('Location: ../views/admin/admin_home.php');
-            }
-            else
-            {
+
               header('Location: ../views/usuario/usuario_home.php');
-            }
+              // Por alguna razon no esta guardando los datos de sesion y tengo que usar login
+              login();
+
           }else{
             // echo "la has liado";
               echo $sql;

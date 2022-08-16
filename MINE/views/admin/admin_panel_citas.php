@@ -119,6 +119,9 @@ $result=$mysqli->query($query);
         </tr>
     <?php } ?>
       </table>
+      <form action="admin_panel_citas.php" method="post" id="datos_usuario">
+        <input type="number" value="" placeholder="ID a eliminar" id="enviar" name="id">
+      <input type="submit" value="Borrar registro" id="enviar" name="btn_borrar_cita">
     </div>
   </main>
   <footer>

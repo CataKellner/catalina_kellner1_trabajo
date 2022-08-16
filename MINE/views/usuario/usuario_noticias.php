@@ -1,3 +1,12 @@
+
+
+<?php
+include('../../PHP/bd.php');
+include('../../PHP/metodos_admin.php');
+$query = "SELECT idNoticias, idUser, titulo, imagen, fecha FROM noticias";
+$result=$mysqli->query($query);
+// $result = mysqli_query($mysqli, $query);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -71,58 +80,41 @@
 
 
       <div id="login">
-      <h2>Crear noticas</h2>
+      <h2>Noticias</h2>
+      <div>
 
+      </div>
+      <br>
+        <table cellspacing="5px" cellpadding="5px">
+          <tr>
+            <th>Numero</th>
+            <th>IDN</th>
+            <th>Titulo</th>
+            <th>Imagen </th>
+            <th>Fecha</th>
+          </tr>
+          <?php
+          if (mysqli_num_rows($result) > 0) {
+            $sn=1;
+            while($data = mysqli_fetch_assoc($result)) {
+          ?>
+          <tr>
+            <!-- include button -->
 
-<form method="post"  enctype="multipart/form-data" action="crear_noticia.php">
-<table>
-<tr>
-<td width="250">Name</td>
-<td>
-<input name="titulo" type="text" id="fname" />
-</td>
-</tr>
-<!-- <tr>
-<td width="250">Email: (will not be publicized)</td>
-<td>
-<input name="email" type="text" id="email" /><br />
-</td>
-</tr> -->
-<!-- <tr>
-<td width="250">Client Type</td>
-<td id="mainselection">
-<select name="type" id="type">
-    <option></option>
-    <option value="Residential">Residential</option>
-    <option value="Business">Business</option>
-
-</select> -->
-</td>
-</tr>
-<tr>
-<td width="250">Comments</td>
-<td>
-<textarea id="content" name="texto" rows="10" cols="50" style="border-style:groove;box-shadow: none;"placeholder="Please describe your experience"></textarea>
-</td>
-</tr>
-
-<tr>
-<td width="250">Image</td>
-<td>
-<input name="file" type="file" id="archivo">
-</td>
-</tr>
-
-<tr>
-<td width="250"> </td>
-<td>
-<input name="add" type="submit" id="add" value="Add Testimonial">
-</td>
-</tr>
-</table>
-</form>
-
-</div>
+            <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
+            <td><?php echo $sn; ?> </td>
+            <td><?php echo $data['titulo']; ?> </td>
+            <td><?php echo $data['imagen']; ?> </td>
+            <td><?php echo $data['fecha']; ?> </td>
+          <tr>
+          <?php
+            $sn++;}} else { ?>
+              <tr>
+              <td colspan="8">No data found</td>
+              </tr>
+          <?php } ?>
+        </table>
+      </div>
     </main>
 	<footer>
         <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->

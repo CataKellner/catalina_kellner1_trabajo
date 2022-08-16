@@ -24,14 +24,14 @@ if (isset($_GET['logout'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cmdmosca | user</title>
     <link rel="stylesheet" href="../../css/estilos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 </head>
 
 <body>
-    <header> 
+    <header>
         <!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
             <!--logotipo principal-->
             <div id="header-logo">
@@ -42,38 +42,38 @@ if (isset($_GET['logout'])) {
                 <ul>
                     <li class="header-navegacion">
                         <a href="../../index.html">Inicio</a>
-                    </li> 
+                    </li>
                     <li class="header-navegacion">
                         <a href="../../views/galeria_dinamica.html">Galeria</a>
-                    </li> 
+                    </li>
                     <li class="header-navegacion">
                         <a href="../../views/presupuesto.html">Presupuesto</a>
-                    </li> 
+                    </li>
                     <li class="header-navegacion">
                         <a href="../../views/contacto.html">Contacto</a>
-                    </li>   
+                    </li>
                     <li class="header-navegacion">
                         <a href="../../views/login_BCRYPT.php" id="estoy">login</a>
-                    </li>                                 
-                </ul>        
-            </div>             
+                    </li>
+                </ul>
+            </div>
     </header>
     <!-- Aqui creamos la barra de navegacion de usuario -->
     <div id="usuario-cabecera-usuario">
 		<ul>
 			<li class="header-navegacion">
 				<a href="usuario_citas.php">Citas</a>
-			</li> 
+			</li>
 			<li class="header-navegacion">
 				<a href="usuario_noticias.php">Noticias</a>
-			</li> 
+			</li>
 			<li class="header-navegacion">
 				<a href="usuario_perfil.php">Perfil</a>
-			</li> 
+			</li>
 			<li>
 				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
-			</li>                            
-		</ul>    
+			</li>
+		</ul>
 </div>
     <main id="main-login">
         <div id="login">
@@ -113,7 +113,7 @@ if (isset($_GET['logout'])) {
             <!--Artado de cookis-->
                 <div id="footer-cookis">
                     © 2022 CMD Mosca <a href="">· Términos y condiciones</a> <a href="">· Cookies </a> <a href="">· Política de privacidad</a>
-                </div>           
+                </div>
     </footer>
 </body>
 </html>

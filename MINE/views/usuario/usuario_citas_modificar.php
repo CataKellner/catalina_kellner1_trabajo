@@ -1,3 +1,49 @@
+<?php
+//include ("../../PHP/bd.php");
+include ("../../PHP/metodos_admin.php");
+//session_start();
+
+$s_motivo = "";
+$s_fecha_cita = "";
+$s_idCitas = "";
+
+
+// receive id by button
+rellenar_datos($_POST['editar_cita']);
+
+function rellenar_datos($id){
+
+  global $mysqli;
+
+  global $s_motivo;
+  global $s_fecha_cita;
+  global $s_idCitas;
+
+  // selec user where ID = post received
+
+  $query = "SELECT idCitas, idUser, fecha_cita, motivo FROM citas WHERE idCitas = $id";
+
+  // if (mysqli_query($mysqli, $query)) {
+  //   echo "Record updated successfully<br>";
+  // } else {
+  //   echo "Error reading record: " . mysqli_error($mysqli);
+  // }
+  $result=$mysqli->query($query);
+  $data = mysqli_fetch_assoc($result);
+
+  $s_fecha_cita = $data['fecha_cita'];
+  $s_motivo = $data['motivo'];
+  $s_idCitas = $data['idCitas'];
+
+// if (mysqli_num_rows($result) > 0) {
+//   $sn=1;
+//   while($data = mysqli_fetch_assoc($result)) {$sn++;}
+// }
+//   else {}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,7 +94,7 @@
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div <div id="usuario-cabecera">
+	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
 				<a href="admin_panel_citas.php">Citas</a>
@@ -67,64 +113,30 @@
 			</li>
 		</ul>
 </div>
-    <main id="main-login">
+<main id="main-login">
 
 
-      <div id="login">
-      <h2>Crear noticas</h2>
+  <div id="login">
+  <h2>Modificar cita</h2>
+  <br>
+    <!-- // show data on inputs -->
+    <form action="usuario_citas_modificar.php" method="post" id="datos_usuario">
+      <p>ID</p>
+      <input type="text" value="<?php echo $s_idCitas ?>" name="idCitas">
+      <p>Fecha</p>
+      <input type="date" name="fecha" id="fechaCita"
+      size="15" autocomplete="given-name" value="<?php echo $s_fecha_cita; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
+      <p>Motivo</p>
+      <input type="text" value="<?php echo $s_motivo; ?>" name="motico">
+
+      <input type="submit" value="Registrar datos" id="enviar" name="btn_actualizar_cita">
+      </form>
+  </div>
+  </main>
 
 
-<form method="post"  enctype="multipart/form-data" action="crear_noticia.php">
-<table>
-<tr>
-<td width="250">Name</td>
-<td>
-<input name="titulo" type="text" id="fname" />
-</td>
-</tr>
-<!-- <tr>
-<td width="250">Email: (will not be publicized)</td>
-<td>
-<input name="email" type="text" id="email" /><br />
-</td>
-</tr> -->
-<!-- <tr>
-<td width="250">Client Type</td>
-<td id="mainselection">
-<select name="type" id="type">
-    <option></option>
-    <option value="Residential">Residential</option>
-    <option value="Business">Business</option>
 
-</select> -->
-</td>
-</tr>
-<tr>
-<td width="250">Comments</td>
-<td>
-<textarea id="content" name="texto" rows="10" cols="50" style="border-style:groove;box-shadow: none;"placeholder="Please describe your experience"></textarea>
-</td>
-</tr>
-
-<tr>
-<td width="250">Image</td>
-<td>
-<input name="file" type="file" id="archivo">
-</td>
-</tr>
-
-<tr>
-<td width="250"> </td>
-<td>
-<input name="add" type="submit" id="add" value="Add Testimonial">
-</td>
-</tr>
-</table>
-</form>
-
-</div>
-    </main>
-	<footer>
+  <footer>
         <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->
             <!--Redes sociales-->
                 <div id="footer-redes">

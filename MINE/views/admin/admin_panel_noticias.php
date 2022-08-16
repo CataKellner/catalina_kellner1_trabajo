@@ -108,7 +108,8 @@ $result=$mysqli->query($query);
             <td><form action="admin_panel_noticias_modificar.php" method="post" id="btn_standard"><input type="submit"
             value="<?php echo $data['idNoticias'] ?>" name="editar_noticia"></td>
             <td><?php echo $data['titulo']; ?> </td>
-            <td><?php echo $data['imagen']; ?> </td>
+            <td><img src="<?php echo $data['imagen']?>"/></td>
+            <!-- echo '<img src="data:image/jpeg;base64,'.base64_encode($row['image']).'"/>'; -->
             <td><?php echo $data['fecha']; ?> </td>
           <tr>
           <?php
@@ -118,6 +119,10 @@ $result=$mysqli->query($query);
               </tr>
           <?php } ?>
         </table>
+        <form action="admin_panel_noticias.php" method="post" id="datos_usuario">
+        <input type="number" value="" placeholder="ID a eliminar" id="enviar" name="id">
+      <input type="submit" value="Borrar registro" id="enviar" name="btn_borrar_noticia">
+      </form>
       </div>
     </main>
 	<footer>

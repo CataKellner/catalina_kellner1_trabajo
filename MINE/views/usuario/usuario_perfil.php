@@ -1,10 +1,49 @@
 <?php
-include('../../PHP/metodos.php');
-include('metodos_user.php');
-if (!isLoggedIn()) {
-	$_SESSION['msg'] = "You must log in first";
-	header('location: login.php');
+//include ("../../PHP/bd.php");
+include ("../../PHP/metodos_admin.php");
+// session_start();
+
+$s_Nombre = "";
+$s_Apellidos = "";
+$s_Email = "";
+$s_Direccion = "";
+$s_Telefono = "";
+$s_Genero = "";
+
+// receive id by button
+// echo $_POST['editar_usuario'];
+rellenar_datos($_SESSION['idUser']);
+
+function rellenar_datos($id){
+
+  global $mysqli;
+
+  global $s_Nombre;
+  global $s_Apellidos;
+  global $s_Email;
+  global $s_Direccion;
+  global $s_Telefono;
+  global $s_Genero;
+  // selec user where ID = post received
+
+  $query = "SELECT idUser, nombre, apellidos, email, fecha_nacimiento, direccion, telefono, genero FROM users_data WHERE idUser = $id";
+  $result=$mysqli->query($query);
+  $data = mysqli_fetch_assoc($result);
+  $s_Nombre = $data['nombre'];
+  $s_Apellidos = $data['apellidos'];
+  $s_Email =$data['email'] ;
+  $s_Direccion =$data['direccion'] ;
+  $s_fecha_nacimiento =$data['fecha_nacimiento'] ;
+  $s_Telefono = $data['telefono'];
+  $s_Genero =$data['genero'] ;
+// if (mysqli_num_rows($result) > 0) {
+//   $sn=1;
+//   while($data = mysqli_fetch_assoc($result)) {$sn++;}
+// }
+//   else {}
+
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,101 +53,104 @@ if (!isLoggedIn()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cmdmosca | user</title>
     <link rel="stylesheet" href="../../css/estilos.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+	<!-- <style>
+	.header {
+		background: #003366;
+	}
+	button[name=register_btn] {
+		background: #003366;
+	}
+	</style> -->
 </head>
-
 <body>
-    <header> 
-        <!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
-            <!--logotipo principal-->
-            <div id="header-logo">
-                <img src="../../assets/svg/logo.svg" alt="logo comando mosca" id="img-logo">
-            </div>
-        <!--navegacion entre paginas-->
-            <div id="header-menu">
-                <ul>
-                    <li class="header-navegacion">
-                        <a href="../../index.html">Inicio</a>
-                    </li> 
-                    <li class="header-navegacion">
-                        <a href="../../views/galeria_dinamica.html">Galeria</a>
-                    </li> 
-                    <li class="header-navegacion">
-                        <a href="../../views/presupuesto.html">Presupuesto</a>
-                    </li> 
-                    <li class="header-navegacion">
-                        <a href="../../views/contacto.html">Contacto</a>
-                    </li>   
-                    <li class="header-navegacion">
-                        <a href="../../views/login_BCRYPT.php" id="estoy">login</a>
-                    </li>                                 
-                </ul>        
-            </div>             
+	<header>
+	<!--Aqui va a ir la el logotipo principal y la navegacion entre paginas-->
+		<!--logotipo principal-->
+		<div id="header-logo">
+			<img src="../../assets/svg/logo.svg" alt="logo comando mosca" id="img-logo">
+		</div>
+	<!--navegacion entre paginas-->
+		<div id="header-menu">
+			<ul>
+				<li class="header-navegacion">
+					<a href="../../index.html">Inicio</a>
+				</li>
+				<li class="header-navegacion">
+					<a href="../../views/galeria_dinamica.html">Galeria</a>
+				</li>
+				<li class="header-navegacion">
+					<a href="../../views/presupuesto.html">Presupuesto</a>
+				</li>
+				<li class="header-navegacion">
+					<a href="../../views/contacto.html">Contacto</a>
+				</li>
+				<li class="header-navegacion">
+					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+				</li>
+			</ul>
+		</div>
     </header>
-    <!-- Aqui creamos la barra de navegacion de usuario -->
-    <div id="usuario-cabecera-usuario">
+	<!-- Aqui creamos la barra de navegacion de admin -->
+	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
-				<a href="usuario_citas.php">Citas</a>
-			</li> 
+				<a href="admin_panel_citas.php">Citas</a>
+			</li>
 			<li class="header-navegacion">
-				<a href="usuario_noticias.php">Noticias</a>
-			</li> 
+				<a href="admin_panel_noticias.php">Noticias</a>
+			</li>
 			<li class="header-navegacion">
-				<a href="usuario_perfil.php">Perfil</a>
-			</li> 
+				<a href="admin_perfil.php">Perfil</a>
+			</li>
 			<li>
-				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
-			</li>                            
-		</ul>    
+			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
+			</li>
+			<li>
+				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
+			</li>
+		</ul>
 </div>
-    <main id="main-login">
-        <div id="login">
-    <!-- Mostrar en fila los datos del usuario -->
-        <form action="usuario_perfil.php" method="post">
-            <?php echo display_error(); ?>
-                <!--datos cliente / users_data-->
-                    Nombre <br>
-                        <input type="text" name="nombre" id="nombre"
-                        size="15" autocomplete="given-name" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" ><br>
-                    Apellidos <br>
-                        <input type="text" name="apellidos" id="apellidos"
-                        size="40" autocomplete="family-name" placeholder="Sus apellidos"  pattern="[A-Za-z]{3-40}" ><br>
-                    Email <br>
-                        <input type="email" name="email" id="email"
-                        multiple autocomplete="email" placeholder="Su email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
-                    Telefono <br>
-                        <input type="tel" name="telefono" id="telefono"
-                        size="9" autocomplete="tel" placeholder="Su telefono" ><br>
-                    Fecha de nacimiento <br>
-                        <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" ><br>
-                    Direccion <br>
-                        <input type="text" name="direccion" id="direccion" ><br>
-                    genero <br>
-                        <!-- <input type="text" name="genero" id="genero" required><br> -->
-                        <select name="genero" >
-                        <!-- onchange="cambiar_genero(this)" -->
-                            <option type="text" id="mujer" value="mujer"  selected>Mujer</option>
-                            <option type="text" id="hombre" value="hombre" >Hombre</option>
-                            <option type="text" id="lgtbiqa" value="lgtbiqa" >lgtbiqa+</option>
-                            <option type="text" id="indefinido" value="indefinido" >indefinido</option>
-                        </select>
-                        <br>
-                        <!--datos cliente / users_login-->
-                            Usuario <span id="respuesta"></span><br>
-                            <input type="text" name="usuario" id="usuario" required><br>
-                            Contraseña <br>
-                                <input type="password" name="password" id="password" required><br></br>
-                                <!--boton de envio-->
-                                    <!-- <input type="submit" value="Acceder" onclick="validar(this.form);"> -->
-                                    <button type="submit" class="btn" name="cambiar_datos_usuario">Cambiar datos</button>
-            </form>
-        </div>
-    </main>
-    <footer>
+<main id="main-login">
+
+
+  <div id="login">
+  <h2>Tus datos de usuario</h2>
+
+<!-- // show data on inputs -->
+      <form action="usuario_perfil.php" method="post" id="datos_usuario">
+        <p>Identificador</p>
+        <input type="text" value="<?php echo $_SESSION['idUser']; ?>" name="idUser">
+        <p>Nombre</p>
+        <input type="text" name="nombre" id="nombre"
+        size="15" autocomplete="given-name" value="<?php echo $s_Nombre; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
+        <p>Apellidos</p>
+        <input type="text" value="<?php echo  $s_Apellidos; ?>" name="apellidos">
+        <p>Telefono</p>
+        <input type="text" value="<?php echo $s_Telefono; ?>" name="telefono">
+        <p>Email</p>
+        <input type="text" value="<?php echo $s_Email; ?>" name="email">
+        <p>Nacimiento</p>
+        <p><?php if(isset($s_fecha_nacimiento)){echo $s_fecha_nacimiento;} ?></p>
+        <input type="date" value="<?php echo $s_fecha_nacimiento; ?>" name="fecha_nacimiento" id="fecha_nacimiento">
+        <p>Direccion</p>
+        <input type="text" value ="<?php echo $s_Direccion; ?>" name="direccion" id="direccion" ><br>
+        <p>Genero</p>
+        <select name="genero">
+            <option type="text" id="mujer" value="mujer"  selected>Mujer</option>
+            <option type="text" id="hombre" value="hombre" >Hombre</option>
+            <option type="text" id="lgtbiqa" value="lgtbiqa" >lgtbiqa+</option>
+            <option type="text" id="indefinido" value="indefinido" >indefinido</option>
+        </select>
+        <br></br>
+        <input type="submit" value="Registrar datos" id="enviar" name="btn_actualizar_datos_usuario">
+        </form>
+  </div>
+  </main>
+  <footer>
         <!--Aqui van a ir el apartado de cookis, redes sociales y direccion de la empresa-->
             <!--Redes sociales-->
                 <div id="footer-redes">
@@ -135,11 +177,7 @@ if (!isLoggedIn()) {
             <!--Artado de cookis-->
                 <div id="footer-cookis">
                     © 2022 CMD Mosca <a href="">· Términos y condiciones</a> <a href="">· Cookies </a> <a href="">· Política de privacidad</a>
-                </div>           
+                </div>
     </footer>
 </body>
 </html>
-
-mostrar un boton modificar
-al hacer click en el boton lleva a otra pagina
-pagina formularion de modificar dichos datos

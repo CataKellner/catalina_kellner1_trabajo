@@ -18,6 +18,75 @@ if(isset($_POST["btn_actualizar_cita"])){
   actualizar_cita();
 }
 
+if(isset($_POST["btn_borrar_usuario"])){
+  borrar_usuario($_POST['id']);
+}
+
+if(isset($_POST["btn_borrar_cita"])){
+  borrar_cita($_POST['id']);
+}
+
+if(isset($_POST["btn_borrar_noticia"])){
+  borrar_noticia($_POST['id']);
+}
+
+function borrar_usuario($id){
+
+  global $mysqli;
+  $sql ="DELETE FROM users_login WHERE idUser = $id";
+  if ($mysqli->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    // header("Location: admin_panel_usuarios.php");
+  } else {
+    echo "Error updating record: " . $mysqli->error;
+  }
+  $sql ="DELETE FROM users_data WHERE idUser = $id";
+  if ($mysqli->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    header("Location: admin_panel_usuarios.php");
+  } else {
+    echo "Error updating record: " . $mysqli->error;
+  }
+}
+
+function borrar_cita($id){
+
+  global $mysqli;
+  $sql ="DELETE FROM citas WHERE idCitas = $id";
+  if ($mysqli->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    if($_SESSION['rol'] == "admin")
+    {
+      header("Location: admin_panel_citas.php");
+    }
+    else{
+      header("Location: usuario_citas.php");
+    }
+  } else {
+    echo "Error updating record: " . $mysqli->error;
+  }
+
+}
+
+function borrar_noticia($id){
+
+  global $mysqli;
+  $sql ="DELETE FROM noticias WHERE idNoticias = $id";
+  if ($mysqli->query($sql) === TRUE) {
+    echo "Record updated successfully";
+    if($_SESSION['rol'] == "admin")
+    {
+      header("Location: admin_panel_noticias.php");
+    }
+    else{
+      header("Location: usuario_noticias.php");
+    }
+  } else {
+    echo "Error updating record: " . $mysqli->error;
+  }
+
+}
+
 function actualizar_cita(){
 
   global $mysqli;
@@ -30,6 +99,13 @@ function actualizar_cita(){
 
     if ($mysqli->query($sqlCitas) === TRUE) {
       echo "Record updated successfully";
+      if($_SESSION['rol'] == "admin")
+    {
+      header("Location: admin_panel_citas.php");
+    }
+    else{
+      header("Location: usuario_citas.php");
+    }
     } else {
       echo "Error updating record: " . $mysqli->error;
     }
@@ -65,6 +141,13 @@ function crear_cita(){
       $sql6= "INSERT INTO citas (idUser, fecha_cita, motivo) VALUES ('".$idUser."','".$fecha_cita."','".$motivo."')";
       if ($mysqli->query($sql6) === TRUE) {
         echo "Record updated successfully";
+        if($_SESSION['rol'] == "admin")
+        {
+          header("Location: admin_panel_citas.php");
+        }
+        else{
+          header("Location: usuario_citas.php");
+        }
       } else {
         echo "Error updating record: " . $mysqli->error;
       }
@@ -90,6 +173,13 @@ function actualizar_datos_usuario($idUser){
 
     if ($mysqli->query($sqlData) === TRUE) {
       echo "Record updated successfully";
+      if($_SESSION['rol'] == "admin")
+      {
+        header("Location: admin_panel_usuarios.php");
+      }
+      else{
+        header("Location: usuario_perfil.php");
+      }
     } else {
       echo "Error updating record: " . $mysqli->error;
     }

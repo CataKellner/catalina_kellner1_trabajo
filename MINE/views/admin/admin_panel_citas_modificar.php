@@ -131,6 +131,7 @@ function rellenar_datos($id){
 
       <input type="submit" value="Registrar datos" id="enviar" name="btn_actualizar_cita">
       </form>
+
   </div>
   </main>
   <footer>

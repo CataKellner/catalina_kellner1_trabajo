@@ -20,6 +20,20 @@ if(isset($_POST["btn_actualizar_cita"])){
 
 function actualizar_cita(){
 
+  global $mysqli;
+
+  $fecha_cita = $_POST['fecha_cita'];
+  $motivo = $_POST['motivo'];
+    //update user UPDATE SET where userid = $userid
+
+    $sqlCitas="UPDATE citas SET fecha_cita = '$fecha_cita', motivo = '$motivo' WHERE idUser=$idUser";
+
+    if ($mysqli->query($sqlCitas) === TRUE) {
+      echo "Record updated successfully";
+    } else {
+      echo "Error updating record: " . $mysqli->error;
+    }
+
 }
 
 function crear_cita(){

@@ -57,7 +57,7 @@ $result=$mysqli->query($query);
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div id="usuario-cabecera">
+	<div <div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
 				<a href="admin_panel_citas.php">Citas</a>
@@ -69,23 +69,28 @@ $result=$mysqli->query($query);
 				<a href="admin_perfil.php">Perfil</a>
 			</li>
 			<li>
+			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
+			</li>
+			<li>
 				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
-			<li>
-			&nbsp; <a href="admin_panel_usuarios_crear.php"> + add usuario</a>
-			</li>
-			<li>
-			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
-			</li>
 		</ul>
-  </div>
+</div>
     <main id="main-login">
 
-    <div><button type="button"><a href="admin_panel_noticias_crear.php">Crear Noticia</a></button></div>
-
+      
       <div id="login">
-        <table border ="1" cellspacing="0" cellpadding="10">
+        
+      <div>
+        <button type="button">
+          <a href="admin_panel_noticias_crear.php">Crear Noticia</a>
+        </button>
+      </div>
+      <br>
+        <table cellspacing="5px" cellpadding="5px">
           <tr>
+            <th>Numero</th>
+            <th>IDN</th>
             <th>Titulo</th>
             <th>Imagen </th>
             <th>Fecha</th>

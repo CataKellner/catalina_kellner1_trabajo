@@ -8,6 +8,13 @@ body {
   cursor: url(../assets/svg/mosca.svg), auto;
 }
 
+table th {
+  border: #00ff79 1px solid;
+  border-collapse: separate;
+  margin: 15px;
+  padding: 15px;
+}
+
 /*-COLORES-*/
 /*-TIPOGRADIAS-*/
 /*------Header-------*/

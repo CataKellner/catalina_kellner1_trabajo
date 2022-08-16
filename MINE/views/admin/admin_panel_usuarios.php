@@ -67,22 +67,24 @@ $result=$mysqli->query($query);
 				<a href="admin_perfil.php">Perfil</a>
 			</li>
 			<li>
+			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
+			</li>
+			<li>
 				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
-			<li>
-			&nbsp; <a href="admin_panel_usuarios_crear.php"> + add usuario</a>
-			</li>
-			<li>
-			&nbsp; <a href="admin_modificar_usuario.php"> + ver usuario</a>
-			</li>
 		</ul>
-  </div>
+</div>
     <main id="main-login">
 
-      <div><button type="button"><a href="admin_panel_usuarios_crear.php">Crear Usuario</a></button></div>
-
-      <div id="login">
-        <table border ="1" cellspacing="0" cellpadding="10">
+        
+        <div id="login">
+          <div>
+            <button type="button">
+                <a href="admin_panel_usuarios_crear.php">Crear Usuario</a>
+            </button>
+        </div>
+        <br>
+        <table cellspacing="5px" cellpadding="5px">
           <tr>
             <th>S.N</th>
             <th>userID </th>

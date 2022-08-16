@@ -6,7 +6,19 @@ body{
     padding: 0;
     margin: 0;
         cursor: url(../assets/svg/mosca.svg), auto;
-}
+
+    }
+    table{
+        
+        th{
+        border: #00ff79 1px solid;
+        // border-radius: 1px;
+        // border-color: #00ff79;
+        border-collapse:separate;
+        margin: 15px;
+        padding: 15px;
+    }
+    }
 
     /*-COLORES-*/  
 $verde: #00ff79;

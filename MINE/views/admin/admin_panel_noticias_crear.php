@@ -42,7 +42,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-          			<a href="../views/rellenarNoticias.php">Noticias</a>
+          			<a href="../../views/usuario/usuario_noticias.php">Noticias</a>
         		</li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
@@ -77,7 +77,7 @@
       <h2>Crear noticas</h2>
 
 
-<form method="post"  enctype="multipart/form-data" action="crear_noticia.php">
+<form method="post"  enctype="multipart/form-data" action="crear_noticia.php" style="margin-left: auto; margin-right: auto;">
 	<table>
 	<tr>
 		<td width="250">Name</td>

@@ -53,7 +53,7 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
         <li class="header-navegacion">
-          <a href="../views/rellenarNoticias.php">Noticias</a>
+          <a href="../../views/usuario/usuario_noticias.php">Noticias</a>
         </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
@@ -94,9 +94,11 @@ $result=$mysqli->query($query);
       </button>
     </div>
     <br>
-    <table cellspacing="5px" cellpadding="5px">
+    <table cellspacing="5px" cellpadding="5px" style="margin-left: auto; margin-right: auto;">
       <tr>
 
+        <th>Numero cita</th>
+        <th>Identificador</th>
         <th>Fecha cita</th>
         <th>Motivo</th>
       </tr>

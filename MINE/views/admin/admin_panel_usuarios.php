@@ -49,7 +49,7 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
                 <li class="header-navegacion">
-                    <a href="../views/rellenarNoticias.php">Noticias</a>
+                    <a href="../../views/usuario/usuario_noticias.php">Noticias</a>
                 </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
@@ -90,16 +90,16 @@ $result=$mysqli->query($query);
             </button>
         </div>
         <br>
-        <table cellspacing="5px" cellpadding="5px">
+        <table cellspacing="5px" cellpadding="5px" style="margin-left: auto; margin-right: auto;">
           <tr>
-            <th>S.N</th>
-            <th>userID </th>
+            <th>Numero</th>
+            <th>Identificador </th>
             <th>Nombre</th>
-            <th>Surname</th>
-            <th>Gender</th>
+            <th>Apellidos</th>
+            <th>Genero</th>
             <th>Email</th>
-            <th>Mobile No</th>
-            <th>Address</th>
+            <th>Telefono</th>
+            <th>Direccion</th>
           </tr>
           <?php
           if (mysqli_num_rows($result) > 0) {

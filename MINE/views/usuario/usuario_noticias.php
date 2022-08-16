@@ -51,7 +51,7 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
         <li class="header-navegacion">
-          <a href="../views/rellenarNoticias.php">Noticias</a>
+          <a href="../../views/usuario/usuario_noticias.php">Noticias</a>
         </li> 
 				<li class="header-navegacion">
 					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
@@ -60,7 +60,7 @@ $result=$mysqli->query($query);
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div id="usuario-cabecera-usuario">
+	<!-- <div id="usuario-cabecera-usuario">
 	<ul>
 			<li class="header-navegacion">
 				<a href="usuario_citas.php">Citas</a>
@@ -75,7 +75,7 @@ $result=$mysqli->query($query);
 				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 		</ul>
-</div>
+</div> -->
     <main id="main-login">
 
 
@@ -85,7 +85,7 @@ $result=$mysqli->query($query);
 
       </div>
       <br>
-        <table cellspacing="5px" cellpadding="5px">
+        <table cellspacing="5px" cellpadding="5px" style="margin-left: auto; margin-right: auto;">
           <tr>
             <th>Numero</th>
             <th>IDN</th>

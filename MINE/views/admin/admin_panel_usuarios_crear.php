@@ -45,7 +45,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-          			<a href="../views/rellenarNoticias.php">Noticias</a>
+          			<a href="../../views/usuario/usuario_noticias.php">Noticias</a>
         		</li> 
 				<li class="header-navegacion">
 					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
@@ -78,7 +78,7 @@
 		<h2>Crear usuario</h2>
 
 
-	<form method="post" action="admin_panel_usuarios_crear.php">
+	<form method="post" action="admin_panel_usuarios_crear.php" style="margin-left: auto; margin-right: auto;">
 
 		<?php echo display_error(); ?>
 

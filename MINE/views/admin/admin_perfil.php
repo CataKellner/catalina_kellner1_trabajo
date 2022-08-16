@@ -89,7 +89,7 @@ function rellenar_datos($id){
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
                 <li class="header-navegacion">
-                    <a href="../views/rellenarNoticias.php">Noticias</a>
+                    <a href="../../views/usuario/usuario_noticias.php">Noticias</a>
                 </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
@@ -124,7 +124,7 @@ function rellenar_datos($id){
   <h2>Tus datos</h2>
 
 <!-- // show data on inputs -->
-      <form action="admin_perfil.php" method="post" id="datos_usuario">
+      <form action="admin_perfil.php" method="post" id="datos_usuario" style="margin-left: auto; margin-right: auto;">
         <p>Identificador</p>
         <input type="text" value="<?php echo $_SESSION['idUser']; ?>" name="idUser">
         <p>Nombre</p>

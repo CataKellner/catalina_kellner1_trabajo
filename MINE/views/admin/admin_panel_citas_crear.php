@@ -45,7 +45,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-          			<a href="../views/rellenarNoticias.php">Noticias</a>
+					<a href="../../views/usuario/usuario_noticias.php">Noticias</a>
         		</li> 
 				<li class="header-navegacion">
 					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
@@ -79,7 +79,7 @@
 		<h2>Crear cita</h2>
 
 
-	<form method="post" action="admin_panel_citas_crear.php">
+	<form method="post" action="admin_panel_citas_crear.php" style="margin-left: auto; margin-right: auto;">
 
 
 
@@ -87,9 +87,11 @@
 			<label>Fecha</label>
 			<input type="date" name="fecha_cita" value="" required>
 			<br>
+			</br>
 			<label>motivo</label>
 			<input type="text" name="motivo" value="">
 			<br>
+			</br>
 			<label>usuario</label>
 			<input type="text" name="idUser" value="<?php echo $_POST['usuario_seleccion'] ?>">
 		</div><br>

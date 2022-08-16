@@ -53,7 +53,7 @@ if (isset($_GET['logout'])) {
                         <a href="../../views/contacto.html">Contacto</a>
                     </li>
                     <li class="header-navegacion">
-                        <a href="../views/rellenarNoticias.php">Noticias</a>
+                        <a href="../views/usuario/usuario_noticias.php">Noticias</a>
                     </li> 
                     <li class="header-navegacion">
                         <a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
@@ -66,9 +66,6 @@ if (isset($_GET['logout'])) {
 		<ul>
 			<li class="header-navegacion">
 				<a href="usuario_citas.php">Citas</a>
-			</li>
-			<li class="header-navegacion">
-				<a href="usuario_noticias.php">Noticias</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="usuario_perfil.php">Perfil</a>

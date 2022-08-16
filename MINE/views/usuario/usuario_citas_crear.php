@@ -45,7 +45,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-          			<a href="../views/rellenarNoticias.php">Noticias</a>
+          			<a href="../views/usuario/usuario_noticias.php">Noticias</a>
         		</li> 
 				<li class="header-navegacion">
 					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
@@ -58,9 +58,6 @@
 	<ul>
 			<li class="header-navegacion">
 				<a href="usuario_citas.php" id="aqui2">Citas</a>
-			</li>
-			<li class="header-navegacion">
-				<a href="usuario_noticias.php">Noticias</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="usuario_perfil.php">Perfil</a>
@@ -84,9 +81,11 @@
 			<label>Fecha</label>
 			<input type="date" name="fecha_cita" value="" required>
 			<br>
+			</br>
 			<label>motivo</label>
 			<input type="text" name="motivo" value="">
 			<br>
+			</br>
 			<label>usuario</label>
 			<input type="text" name="idUser" value="<?php echo $_SESSION['idUser'] ?>">
 		</div><br>

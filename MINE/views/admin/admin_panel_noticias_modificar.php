@@ -97,7 +97,7 @@ function rellenar_datos($id){
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
                 <li class="header-navegacion">
-                    <a href="../views/rellenarNoticias.php">Noticias</a>
+                    <a href="../../views/usuario/usuario_noticias.php">Noticias</a>
                 </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
@@ -133,7 +133,7 @@ function rellenar_datos($id){
 
 
     <!-- // show data on inputs -->
-    <form action="admin_panel_noticias_modificar.php" method="post" id="datos_usuario">
+    <form action="admin_panel_noticias_modificar.php" method="post" id="datos_usuario" style="margin-left: auto; margin-right: auto;">
       <p>Identificador</p>
       <input type="text" value="<?php echo $s_idNoticias ?>" name="idNoticias">
       <p>Titulo</p>

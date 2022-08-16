@@ -37,6 +37,9 @@ require '../PHP/bd.php';
                         <li class="header-navegacion">
                             <a href="../views/contacto.html">Contacto</a>
                         </li>
+                        <li class="header-navegacion">
+                            <a href="../views/rellenarNoticias.php">Noticias</a>
+                        </li> 
                         <li class="header_navegacion">
                             <a href="../views/login_BCRYPT.php" id="estoy">Login</a>
                         </li>

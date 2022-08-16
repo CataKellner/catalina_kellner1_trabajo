@@ -48,6 +48,9 @@ $result=$mysqli->query($query);
 				<li class="header-navegacion">
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
+                <li class="header-navegacion">
+                    <a href="../views/rellenarNoticias.php">Noticias</a>
+                </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="aqui">Login</a>
 				</li>

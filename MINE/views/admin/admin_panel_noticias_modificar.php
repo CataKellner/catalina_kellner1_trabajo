@@ -96,6 +96,9 @@ function rellenar_datos($id){
 				<li class="header-navegacion">
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
+                <li class="header-navegacion">
+                    <a href="../views/rellenarNoticias.php">Noticias</a>
+                </li> 
 				<li class="header-navegacion">
 					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
 				</li>

@@ -78,7 +78,7 @@ $result=$mysqli->query($query);
 </div>
     <main id="main-login">
 
-      
+
       <div id="login">
       <h2>Noticas</h2>
       <div>
@@ -105,7 +105,8 @@ $result=$mysqli->query($query);
 
             <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
             <td><?php echo $sn; ?> </td>
-            <td><form action="admin_panel_noticias.php" method="post" id="btn_standard"><input type="submit" value="<?php echo $data['idNoticias'] ?>" name="editar_noticia"></td>
+            <td><form action="admin_panel_noticias_modificar.php" method="post" id="btn_standard"><input type="submit"
+            value="<?php echo $data['idNoticias'] ?>" name="editar_noticia"></td>
             <td><?php echo $data['titulo']; ?> </td>
             <td><?php echo $data['imagen']; ?> </td>
             <td><?php echo $data['fecha']; ?> </td>

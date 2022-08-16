@@ -80,6 +80,10 @@ $result=$mysqli->query($query);
 </div>
 <main id="main-login">
 
+<<<<<<< Updated upstream
+=======
+<div><button type="button"><a href="admin_panel_citas_seleccion_usuario.php">Crear Cita</a></button></div>
+>>>>>>> Stashed changes
 
   
   <div id="login">
@@ -108,7 +112,8 @@ $result=$mysqli->query($query);
 
       <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
       <td><?php echo $sn; ?> </td>
-      <td><form action="admin_usuarios.php" method="post" id="btn_standard"><input type="submit" value="<?php echo $data['idCitas'] ?>" name="editar_cita"></td>
+      <td><form action="admin_panel_citas_modificar.php" method="post" id="btn_standard"><input type="submit"
+      value="<?php echo $data['idCitas'] ?>" name="editar_cita"></td>
       <td><?php echo $data['fecha_cita']; ?> </td>
       <td><?php echo $data['motivo']; ?> </td>
     <tr>

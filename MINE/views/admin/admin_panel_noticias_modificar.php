@@ -127,11 +127,11 @@ function rellenar_datos($id){
 
   <div id="login">
   <h2>Moificar Noticia</h2>
-  <br>
+
 
     <!-- // show data on inputs -->
     <form action="admin_panel_noticias_modificar.php" method="post" id="datos_usuario">
-      <p>ID</p>
+      <p>Identificador</p>
       <input type="text" value="<?php echo $s_idNoticias ?>" name="idNoticias">
       <p>Titulo</p>
       <input type="date" name="fecha" id="fechaCita" value="<?php echo $s_fecha; ?>" >

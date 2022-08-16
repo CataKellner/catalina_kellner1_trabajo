@@ -45,7 +45,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/login_BCRYPT.php" id="estoy">login</a>
+					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -54,7 +54,7 @@
 	<div id="usuario-cabecera">
 		<ul>
 			<li class="header-navegacion">
-				<a href="admin_panel_citas.php" id="aqui">Citas</a>
+				<a href="admin_panel_citas.php" id="estoy">Citas</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="admin_panel_noticias.php">Noticias</a>
@@ -82,7 +82,7 @@
 
 		<div class="input-group">
 			<label>Fecha</label>
-			<input type="date" name="fecha_cita" value="">
+			<input type="date" name="fecha_cita" value="" required>
 			<br>
 			<label>motivo</label>
 			<input type="text" name="motivo" value="">

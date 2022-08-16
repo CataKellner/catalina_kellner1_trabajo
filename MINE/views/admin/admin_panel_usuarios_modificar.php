@@ -89,7 +89,7 @@ function rellenar_datos($id){
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -126,13 +126,13 @@ function rellenar_datos($id){
         <input type="text" value="<?php echo $_POST['editar_usuario']; ?>" name="idUser">
         <p>Nombre</p>
         <input type="text" name="nombre" id="nombre"
-        size="15" autocomplete="given-name" value="<?php echo $s_Nombre; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
+        size="15" autocomplete="given-name" value="<?php echo $s_Nombre; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" required>
         <p>Apellidos</p>
-        <input type="text" value="<?php echo  $s_Apellidos; ?>" name="apellidos">
+        <input type="text" value="<?php echo  $s_Apellidos; ?>" name="apellidos" required>
         <p>Telefono</p>
         <input type="text" value="<?php echo $s_Telefono; ?>" name="telefono">
         <p>Email</p>
-        <input type="text" value="<?php echo $s_Email; ?>" name="email">
+        <input type="text" value="<?php echo $s_Email; ?>" name="email" required>
         <p>Nacimiento</p>
         <input type="date" value="<?php echo $s_fecha_nacimiento; ?>" name="fecha_nacimiento" id="fecha_nacimiento">
         <p>Direccion</p>

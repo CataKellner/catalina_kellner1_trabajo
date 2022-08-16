@@ -53,7 +53,7 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -62,7 +62,7 @@ $result=$mysqli->query($query);
 	<div id="usuario-cabecera-usuario">
 		<ul>
 			<li class="header-navegacion">
-				<a href="usuario_citas.php">Citas</a>
+				<a href="usuario_citas.php" id="aqui2">Citas</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="usuario_noticias.php">Noticias</a>

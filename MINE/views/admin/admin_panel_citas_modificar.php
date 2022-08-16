@@ -88,7 +88,7 @@ function rellenar_datos($id){
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -125,7 +125,7 @@ function rellenar_datos($id){
       <input type="text" value="<?php echo $s_idCitas ?>" name="idCitas">
       <p>Fecha</p>
       <input type="date" name="fecha" id="fechaCita"
-      size="15" autocomplete="given-name" value="<?php echo $s_fecha_cita; ?>" placeholder="Su nombre" pattern="[A-Za-z]{3-15}" >
+      size="15" autocomplete="given-name" value="<?php echo $s_fecha_cita; ?>" required>
       <p>Motivo</p>
       <input type="text" value="<?php echo $s_motivo; ?>" name="motico">
 

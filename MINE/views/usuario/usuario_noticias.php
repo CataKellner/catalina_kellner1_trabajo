@@ -51,7 +51,7 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/login_BCRYPT.php" id="estoy">login</a>
+					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -63,7 +63,7 @@ $result=$mysqli->query($query);
 				<a href="usuario_citas.php">Citas</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="usuario_noticias.php">Noticias</a>
+				<a href="usuario_noticias.php" id="aqui2">Noticias</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="usuario_perfil.php">Perfil</a>

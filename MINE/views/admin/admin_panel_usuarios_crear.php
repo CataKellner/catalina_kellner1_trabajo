@@ -45,7 +45,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/login_BCRYPT.php" id="estoy">login</a>
+					<a href="../../views/login_BCRYPT.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -81,19 +81,19 @@
 
 		<div class="input-group">
 			<label>Username</label>
-			<input type="text" name="usuario" value="<?php echo $usuario; ?>">
+			<input type="text" name="usuario" value="<?php echo $usuario; ?>" required>
 		</div><br>
 		<div class="input-group">
 			<label>Name</label>
-			<input type="text" name="nombre" value="<?php echo $nombre; ?>">
+			<input type="text" name="nombre" value="<?php echo $nombre; ?>" pattern="[A-Za-z]{3-15}" required>
 		</div><br>
 		<div class="input-group">
 			<label>Email</label>
-			<input type="email" name="email" value="<?php echo $email; ?>">
+			<input type="email" name="email" value="<?php echo $email; ?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 		</div><br>
 		<div class="input-group">
 			<label>User type</label>
-			<select name="rol" id="rol" >
+			<select name="rol" id="rol">
 				<option value=""></option>
 				<option value="admin">Admin</option>
 				<option value="usuario">Usuario</option>
@@ -101,14 +101,14 @@
 		</div><br>
 		<div class="input-group">
 			<label>Password</label>
-			<input type="password" name="password">
+			<input type="password" name="password" required>
 		</div><br>
 		<div class="input-group">
 			<label>Confirm password</label>
-			<input type="password" name="password_2">
+			<input type="password" name="password_2" required>
 		</div><br>
 		<div class="input-group">
-			<button type="submit" class="btn" name="crear_nuevo_usuario"> + Create user</button>
+			<button type="submit" class="btn" name="crear_nuevo_usuario">Create user</button>
 		</div>
 	</form>
 	</div>

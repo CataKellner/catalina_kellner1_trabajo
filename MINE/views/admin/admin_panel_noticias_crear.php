@@ -42,7 +42,7 @@
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/admin/admin_home.php" id="estoy">Login</a>
 				</li>
 			</ul>
 		</div>
@@ -75,50 +75,50 @@
 
 
 <form method="post"  enctype="multipart/form-data" action="crear_noticia.php">
-<table>
-<tr>
-<td width="250">Name</td>
-<td>
-<input name="titulo" type="text" id="fname" />
-</td>
-</tr>
-<!-- <tr>
-<td width="250">Email: (will not be publicized)</td>
-<td>
-<input name="email" type="text" id="email" /><br />
-</td>
-</tr> -->
-<!-- <tr>
-<td width="250">Client Type</td>
-<td id="mainselection">
-<select name="type" id="type">
-    <option></option>
-    <option value="Residential">Residential</option>
-    <option value="Business">Business</option>
+	<table>
+	<tr>
+		<td width="250">Name</td>
+		<td>
+		<input name="titulo" type="text" id="fname" />
+		</td>
+	</tr>
+	<!-- <tr>
+	<td width="250">Email: (will not be publicized)</td>
+	<td>
+	<input name="email" type="text" id="email" /><br />
+	</td>
+	</tr> -->
+	<!-- <tr>
+	<td width="250">Client Type</td>
+	<td id="mainselection">
+	<select name="type" id="type">
+		<option></option>
+		<option value="Residential">Residential</option>
+		<option value="Business">Business</option>
 
-</select> -->
-</td>
-</tr>
-<tr>
-<td width="250">Comments</td>
-<td>
-<textarea id="content" name="texto" rows="10" cols="50" style="border-style:groove;box-shadow: none;"placeholder="Please describe your experience"></textarea>
-</td>
-</tr>
+	</select> -->
+	</td>
+	</tr>
+	<tr>
+		<td width="250">Comments</td>
+		<td>
+		<textarea id="content" name="texto" rows="10" cols="50" style="border-style:groove;box-shadow: none;"placeholder="Please describe your experience" required></textarea>
+		</td>
+	</tr>
 
-<tr>
-<td width="250">Image</td>
-<td>
-<input name="file" type="file" id="archivo">
-</td>
-</tr>
+	<tr>
+		<td width="250">Image</td>
+		<td>
+		<input name="file" type="file" id="archivo">
+		</td>
+	</tr>
 
-<tr>
-<td width="250"> </td>
-<td>
-<input name="add" type="submit" id="add" value="Add Testimonial">
-</td>
-</tr>
+	<tr>
+		<td width="250"> </td>
+		<td>
+		<input name="add" type="submit" id="add" value="Add Testimonial">
+		</td>
+	</tr>
 </table>
 </form>
 

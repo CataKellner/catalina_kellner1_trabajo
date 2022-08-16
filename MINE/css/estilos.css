@@ -87,6 +87,10 @@ header #header-menu ul li a:active {
   z-index: 3;
   background-color: #00ff79;
 }
+#usuario-cabecera #estoy {
+  color: white;
+  font-weight: bold;
+}
 #usuario-cabecera ul {
   font-size: 12px;
   display: grid;

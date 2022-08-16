@@ -12,7 +12,7 @@ $s_Genero = "";
 
 // receive id by button
 // echo $_POST['editar_usuario'];
-// rellenar_datos($_POST['editar_usuario']);
+rellenar_datos($_POST['editar_usuario']);
 
 function rellenar_datos($id){
 

@@ -100,8 +100,8 @@ $result=$mysqli->query($query);
 
             <!-- <td><input type="submit" value="Ver todos" name="refrescar"></td> -->
             <td><?php echo $sn; ?> </td>
-            <td><form action="admin_panel_usuarios_modificar.php" method="post" id="btn_standard"><input type="submit"
-              value="<?php echo $data['idUser'] ?>" name="editar_usuario"></td>
+            <td><form action="admin_panel_citas_crear.php" method="post" id="btn_seleccion"><input type="submit"
+              value="<?php echo $data['idUser'] ?>" name="usuario_seleccion"></td>
             <td><?php echo $data['nombre']; ?> </td>
             <td><?php echo $data['apellidos']; ?> </td>
             <td><?php echo $data['genero']; ?> </td>

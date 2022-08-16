@@ -78,16 +78,19 @@
 
 	<form method="post" action="admin_panel_citas_crear.php">
 
-		
+
 
 		<div class="input-group">
 			<label>Fecha</label>
 			<input type="date" name="fecha_cita" value="">
-		</div><br>
-		<div class="input-group">
+			<br>
 			<label>motivo</label>
 			<input type="text" name="motivo" value="">
+			<br>
+			<label>usuario</label>
+			<input type="text" name="idUser" value="<?php echo $_POST['usuario_seleccion'] ?>">
 		</div><br>
+
 
 		<div class="input-group">
 			<button type="submit" class="btn" name="btn_crear_nueva_cita"> + Crear cita</button>

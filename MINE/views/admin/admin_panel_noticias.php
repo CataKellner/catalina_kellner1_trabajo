@@ -63,7 +63,7 @@ $result=$mysqli->query($query);
 				<a href="admin_panel_citas.php">Citas</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_panel_noticias.php" id="estoy">Noticias</a>
+				<a href="admin_panel_noticias.php" id="aqui">Noticias</a>
 			</li>
 			<li class="header-navegacion">
 				<a href="admin_perfil.php">Perfil</a>

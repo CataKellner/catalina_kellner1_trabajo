@@ -36,7 +36,7 @@ $result=$mysqli->query($query);
 			<img src="../../assets/svg/logo.svg" alt="logo comando mosca" id="img-logo">
 		</div>
 	<!--navegacion entre paginas-->
-		<div id="header-menu">
+  <div id="header-menu">
 			<ul>
 				<li class="header-navegacion">
 					<a href="../../index.html">Inicio</a>
@@ -51,28 +51,25 @@ $result=$mysqli->query($query);
 					<a href="../../views/contacto.html">Contacto</a>
 				</li>
 				<li class="header-navegacion">
-					<a href="../../views/admin/admin_home.php" id="estoy">login</a>
+					<a href="../../views/login_BCRYPT.php" id="estoy">login</a>
 				</li>
 			</ul>
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div <div id="usuario-cabecera">
-		<ul>
+	<div id="usuario-cabecera-usuario">
+	<ul>
 			<li class="header-navegacion">
-				<a href="admin_panel_citas.php">Citas</a>
+				<a href="usuario_citas.php">Citas</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_panel_noticias.php">Noticias</a>
+				<a href="usuario_noticias.php">Noticias</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_perfil.php">Perfil</a>
+				<a href="usuario_perfil.php">Perfil</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
-			</li>
-			<li>
-				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
+				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 		</ul>
 </div>

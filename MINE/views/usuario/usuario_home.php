@@ -77,13 +77,14 @@ if (isset($_GET['logout'])) {
 </div>
     <main id="main-login">
         <div id="login">
-            <h1>Hola</h1>
+        <h2>Bienvenido a cmdmosca!</h2>
 
-            <h2><?php echo $_SESSION["rol"]; ?> <?php echo $_SESSION["usuario"]; ?></h2>
+        <strong><?php echo $_SESSION["rol"]; ?> <?php echo $_SESSION["usuario"]; ?></strong>
 
-            <h1>Bien venido a cmdmosca!</h1>
-
-            <h2><a href="../../php/salir.php">CERRAR SESSION</a></h2>
+        <br></br>
+        <div id="imagen-home-gif">
+			<img src="../../assets/gif/mosca.gif">
+		</div>
         </div>
     </main>
     <footer>

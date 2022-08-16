@@ -107,7 +107,7 @@ function rellenar_datos($id){
 				<a href="admin_perfil.php">Perfil</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_panel_usuarios.php" id="estoy">Usuarios</a>
+			&nbsp; <a href="admin_panel_usuarios.php" id="aqui">Usuarios</a>
 			</li>
 			<li>
 				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>

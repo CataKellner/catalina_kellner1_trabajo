@@ -104,7 +104,7 @@ function rellenar_datos($id){
 				<a href="admin_panel_noticias.php">Noticias</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_perfil.php" id="estoy">Perfil</a>
+				<a href="admin_perfil.php" id="aqui">Perfil</a>
 			</li>
 			<li>
 			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>

@@ -59,22 +59,19 @@ $result=$mysqli->query($query);
 		</div>
     </header>
 	<!-- Aqui creamos la barra de navegacion de admin -->
-	<div id="usuario-cabecera">
+	<div id="usuario-cabecera-usuario">
 		<ul>
 			<li class="header-navegacion">
-				<a href="admin_panel_citas.php">Citas</a>
+				<a href="usuario_citas.php">Citas</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_panel_noticias.php">Noticias</a>
+				<a href="usuario_noticias.php">Noticias</a>
 			</li>
 			<li class="header-navegacion">
-				<a href="admin_perfil.php">Perfil</a>
+				<a href="usuario_perfil.php">Perfil</a>
 			</li>
 			<li>
-			&nbsp; <a href="admin_panel_usuarios.php">Usuarios</a>
-			</li>
-			<li>
-				<a href="admin_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
+				<a href="usuario_home.php?logout='1'" style="color: red;">Cerrar sesion</a>
 			</li>
 		</ul>
 </div>
